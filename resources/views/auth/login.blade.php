@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="<?php echo asset('public/vendor/bootstrap/css/bootstrap-select.min.css') ?>" type="text/css">
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="<?php echo asset('public/vendor/font-awesome/css/font-awesome.min.css') ?>" type="text/css">
-    <!-- Fontastic Custom icon font-->
-    <link rel="stylesheet" href="<?php echo asset('public/css/fontastic.css') ?>" type="text/css">
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <!-- jQuery Circle-->
@@ -53,14 +51,14 @@
       <div class="container">
         <div class="form-outer text-center d-flex align-items-center">
           <div class="form-inner">
-            <div class="logo text-uppercase"><span>{{$general_setting->site_title}}</span></div>
+            <div class="logo"><span>{{$general_setting->site_title}}</span></div>
             @if(session()->has('delete_message'))
             <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>{{ session()->get('delete_message') }}</div> 
             @endif
-            <form method="POST" action="{{ route('login') }}" id="login-form">
+            <form method="POST" action="{{ url('authenticate') }}" id="login-form">
               @csrf
               <div class="form-group-material">
-                <input id="login-username" type="text" name="name" required class="input-material" value="">
+                <input id="login-username" type="text" name="email" required class="input-material" value="">
                 <label for="login-username" class="label-material">{{trans('file.UserName')}}</label>
                 @if ($errors->has('name'))
                     <p>
@@ -78,12 +76,12 @@
                     </p>
                 @endif
               </div>
-              <button type="submit" class="btn btn-primary">{{trans('file.LogIn')}}</button>
+              <button type="submit" class="btn btn-primary btn-block">{{trans('file.LogIn')}}</button>
             </form>
             <!-- This two button for demo only-->
-            <button type="submit" class="btn btn-success admin-btn">LogIn as Admin</button>
+            <!-- <button type="submit" class="btn btn-success admin-btn">LogIn as Admin</button>
             <button type="submit" class="btn btn-info staff-btn">LogIn as Staff</button>
-            <br><br>
+            <br><br> -->
             <a href="{{ route('password.request') }}" class="forgot-pass">{{trans('file.Forgot Password?')}}</a>
             <p>{{trans('file.Do not have an account?')}}</p><a href="{{url('register')}}" class="signup">{{trans('file.Register')}}</a>
           </div>
@@ -95,7 +93,6 @@
     </div>
   </body>
 </html>
-
 <script type="text/javascript">
     $('.admin-btn').on('click', function(){
         $("input[name='name']").focus().val('admin');
@@ -106,4 +103,28 @@
       $("input[name='name']").focus().val('staff');
       $("input[name='password']").focus().val('staff');
   });
+  // ------------------------------------------------------- //
+    // Material Inputs
+    // ------------------------------------------------------ //
+
+    var materialInputs = $('input.input-material');
+
+    // activate labels for prefilled values
+    materialInputs.filter(function() { return $(this).val() !== ""; }).siblings('.label-material').addClass('active');
+
+    // move label on focus
+    materialInputs.on('focus', function () {
+        $(this).siblings('.label-material').addClass('active');
+    });
+
+    // remove/keep label on blur
+    materialInputs.on('blur', function () {
+        $(this).siblings('.label-material').removeClass('active');
+
+        if ($(this).val() !== '') {
+            $(this).siblings('.label-material').addClass('active');
+        } else {
+            $(this).siblings('.label-material').removeClass('active');
+        }
+    });
 </script>

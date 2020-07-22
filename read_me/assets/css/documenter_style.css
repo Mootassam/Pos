@@ -19,27 +19,30 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,abbr,ac
 }
 html { 
 	font-size:101%;
-	font-family:Arial,verdana,arial,sans-serif;
-	font-size:12px;
+	font-family:Nunito;
+	font-size:14px;
 	-webkit-text-size-adjust:none;
-	color:#6F6F6F;
-	background-color:#efefef;
+	color:#303030;
+	background-color: #FFF;
 }
 body{
 	min-height:100%;
 	height:auto;
 	width:100%;
+	overflow-x: hidden;
 }
 footer, header, section {
 	display:block;
 }
-a{ color:#6F6F6F; text-decoration:none; cursor:pointer; }
+a{ color:#7c5cc4; text-decoration:none; cursor:pointer; }
 a:hover { text-decoration:underline }
 p, ul, ol{
 	margin:18px 0;
 	line-height:1.5em;
 }
 li{
+	font-size:16px;
+	line-height: 30px;
 	list-style:none;
 }
 li.placeholder{
@@ -94,31 +97,38 @@ strong{
 
 #documenter_content{
 	position:absolute;
-	right:18px;
-	left:218px;
-	padding-left:10px;
-	padding-bottom:800px;
+	left:230px;
+	padding: 0 30px 800px;
 	min-height:100%;
 	height:auto;
 	z-index:1;
 }
 #documenter_sidebar{
-	-moz-box-shadow:0 0 6px rgba(3,3,3,0.6);
-	-webkit-box-shadow:0 0 6px rgba(3,3,3,0.6);
-	box-shadow:0 0 6px rgba(3,3,3,0.6);
+	background-color: #fafbfe;
 	position:fixed;
 	left:0;
-	width:200px;
+	width:230px;
 	height:100%;
 	min-height:100%;
 	z-index:100;
 }
 #documenter_sidebar a{
+	color: #303030;
+	font-size: 15px;
+	font-weight: 400;
 	position:relative;
 	z-index:100;
 }
+#documenter_sidebar a:hover{
+	color: #7c5cc4;
+}
+#documenter_sidebar a.current{
+	color: #7c5cc4;
+}
 img{
-	border:0;
+	border: 20px solid #ddd;
+	margin: 50px 0;
+	max-width: 95%;
 }
 #documenter_copyright{
 	position:absolute;
@@ -171,15 +181,11 @@ noscript p{
 }
 
 #documenter_sidebar ul li{
-	text-align:right;
-	padding:0;
+	padding:0 15px;
 }
 #documenter_sidebar ul a{
 	display:block;
-	border-top:1px solid #ddd;
-	border-bottom:1px solid #aaa;
-	padding:6px 15px 7px 0;
-	text-align:right;
+	padding:5px 0;
 }
 #documenter_sidebar ul a:hover,#documenter_sidebar ul a.current{
 	-webkit-text-shadow:none;
@@ -219,6 +225,7 @@ noscript p{
 	width:500px;
 }
 #documenter_content section{
+	min-height: 100vh;
 	padding-top:70px;
 }
 #documenter_content h1{
@@ -251,6 +258,7 @@ noscript p{
 	font-weight:100;
 }
 #documenter_content p{
+	font-size: 16px;
 	margin:18px 0;
 }
 #documenter_content ol li{
@@ -283,7 +291,7 @@ noscript p{
 	text-align:left;
 }
 #documenter_content code{
-	font-family:"Courier New", Courier, monospace;
+	font-family:Nunito;
 	font-size:12px;
 }
 #documenter_content .warning{
