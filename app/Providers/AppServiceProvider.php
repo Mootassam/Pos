@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
        /* if( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) {
             URL::forceScheme('https');
         }*/
-        /*
+        
         if(isset($_COOKIE['language'])) {
             \App::setLocale($_COOKIE['language']);
         } else {
@@ -44,6 +44,6 @@ class AppServiceProvider extends ServiceProvider
         
         $alert_product = DB::table('products')->where('is_active', true)->whereColumn('alert_quantity', '>', 'qty')->count();
         View::share('alert_product', $alert_product);
-        Schema::defaultStringLength(191);*/ 
+        Schema::defaultStringLength(191);
     }
 }
