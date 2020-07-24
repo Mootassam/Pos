@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
@@ -34,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
         
         if(isset($_COOKIE['language'])) {
             \App::setLocale($_COOKIE['language']);
-        } else {
+        }else {
             \App::setLocale('fr');
         }
         //get general setting value        
@@ -42,9 +43,9 @@ class AppServiceProvider extends ServiceProvider
         View::share('general_setting', $general_setting);
         config(['staff_access' => $general_setting->staff_access, 'date_format' => $general_setting->date_format, 'currency' => $general_setting->currency, 'currency_position' => $general_setting->currency_position]);
         */
-        $alert_product = DB::table('products')->where('is_active', true)->whereColumn('alert_quantity', '>', 'qty')->count();
+        /*$alert_product = DB::table('products')->where('is_active', true)->whereColumn('alert_quantity', '>', 'qty')->count();
         View::share('alert_product', $alert_product);
-        Schema::defaultStringLength(191);
+        Schema::defaultStringLength(191);*/
 
     }
 }
