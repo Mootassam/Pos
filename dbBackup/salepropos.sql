@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `accounts`
 --
 
-CREATE TABLE `accounts` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`accounts` (
   `id` int(10) UNSIGNED NOT NULL,
   `account_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE `accounts` (
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `account_no`, `name`, `initial_balance`, `total_balance`, `note`, `is_default`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`accounts` (`id`, `account_no`, `name`, `initial_balance`, `total_balance`, `note`, `is_default`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, '11111', 'Sales Account', 1000, 1000, 'this is first account', 1, 1, '2018-12-18 02:58:02', '2019-01-20 09:59:06'),
 (3, '21211', 'Sa', NULL, 0, NULL, 0, 1, '2018-12-18 02:58:56', '2019-01-20 09:59:06');
 
@@ -55,7 +55,7 @@ INSERT INTO `accounts` (`id`, `account_no`, `name`, `initial_balance`, `total_ba
 -- Table structure for table `adjustments`
 --
 
-CREATE TABLE `adjustments` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`adjustments` (
   `id` int(10) UNSIGNED NOT NULL,
   `reference_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `warehouse_id` int(11) NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE `adjustments` (
 -- Table structure for table `attendances`
 --
 
-CREATE TABLE `attendances` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`attendances` (
   `id` int(10) UNSIGNED NOT NULL,
   `date` date NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE `attendances` (
 -- Dumping data for table `attendances`
 --
 
-INSERT INTO `attendances` (`id`, `date`, `employee_id`, `user_id`, `checkin`, `checkout`, `status`, `note`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`attendances` (`id`, `date`, `employee_id`, `user_id`, `checkin`, `checkout`, `status`, `note`, `created_at`, `updated_at`) VALUES
 (1, '2019-01-02', 1, 1, '10:00am', '6:30pm', 1, NULL, '2019-01-02 03:30:50', '2019-01-02 03:30:50'),
 (3, '2019-01-02', 3, 1, '10:15am', '6:30pm', 0, NULL, '2019-01-02 03:57:12', '2019-01-02 03:57:12'),
 (6, '2020-02-03', 1, 1, '11:30am', '6:00pm', 0, NULL, '2020-02-03 09:57:30', '2020-02-03 09:57:30');
@@ -101,7 +101,7 @@ INSERT INTO `attendances` (`id`, `date`, `employee_id`, `user_id`, `checkin`, `c
 -- Table structure for table `billers`
 --
 
-CREATE TABLE `billers` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`billers` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -123,7 +123,7 @@ CREATE TABLE `billers` (
 -- Dumping data for table `billers`
 --
 
-INSERT INTO `billers` (`id`, `name`, `image`, `company_name`, `vat_number`, `email`, `phone_number`, `address`, `city`, `state`, `postal_code`, `country`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`billers` (`id`, `name`, `image`, `company_name`, `vat_number`, `email`, `phone_number`, `address`, `city`, `state`, `postal_code`, `country`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'yousuf', 'aks.jpg', 'aks', '31123', 'yousuf@kds.com', '442343324', 'halishahar', 'chittagong', NULL, NULL, 'sdgs', 1, '2018-05-12 21:49:30', '2019-03-02 05:20:38'),
 (2, 'tariq', NULL, 'big tree', NULL, 'tariq@bigtree.com', '321312', 'khulshi', 'chittagong', NULL, NULL, NULL, 1, '2018-05-12 21:57:54', '2018-06-15 00:07:11'),
 (3, 'test', NULL, 'test', NULL, 'test@test.com', '3211', 'erewrwqre', 'afsf', NULL, NULL, NULL, 0, '2018-05-30 02:38:58', '2018-05-30 02:39:57'),
@@ -138,7 +138,7 @@ INSERT INTO `billers` (`id`, `name`, `image`, `company_name`, `vat_number`, `ema
 -- Table structure for table `brands`
 --
 
-CREATE TABLE `brands` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`brands` (
   `id` int(10) UNSIGNED NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -151,7 +151,7 @@ CREATE TABLE `brands` (
 -- Dumping data for table `brands`
 --
 
-INSERT INTO `brands` (`id`, `title`, `image`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`brands` (`id`, `title`, `image`, `is_active`, `created_at`, `updated_at`) VALUES
 (3, 'HP', 'HP.jpg', 1, '2018-05-12 09:06:14', '2019-03-02 05:32:21'),
 (4, 'samsung', 'samsung.jpg', 1, '2018-05-12 09:08:41', '2018-07-04 03:38:37'),
 (5, 'Apple', 'Apple.jpg', 1, '2018-08-31 23:34:49', '2018-12-06 03:05:38');
@@ -162,7 +162,7 @@ INSERT INTO `brands` (`id`, `title`, `image`, `is_active`, `created_at`, `update
 -- Table structure for table `categories`
 --
 
-CREATE TABLE `categories` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`categories` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -176,7 +176,7 @@ CREATE TABLE `categories` (
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`id`, `name`, `image`, `parent_id`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`categories` (`id`, `name`, `image`, `parent_id`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'Fruits', NULL, 9, 1, '2018-05-12 03:27:25', '2019-03-01 15:07:21'),
 (2, 'electronics', NULL, NULL, 1, '2018-05-12 03:35:57', '2019-03-01 15:07:21'),
 (3, 'computer', '20200701093146.jpg', 2, 1, '2018-05-12 03:36:08', '2020-07-01 15:31:46'),
@@ -197,7 +197,7 @@ INSERT INTO `categories` (`id`, `name`, `image`, `parent_id`, `is_active`, `crea
 -- Table structure for table `coupons`
 --
 
-CREATE TABLE `coupons` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`coupons` (
   `id` int(10) UNSIGNED NOT NULL,
   `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -216,7 +216,7 @@ CREATE TABLE `coupons` (
 -- Dumping data for table `coupons`
 --
 
-INSERT INTO `coupons` (`id`, `code`, `type`, `amount`, `minimum_amount`, `quantity`, `used`, `expired_date`, `user_id`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`coupons` (`id`, `code`, `type`, `amount`, `minimum_amount`, `quantity`, `used`, `expired_date`, `user_id`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'sonar bangla', 'percentage', 20, 0, 100, 3, '2020-03-31', 1, 1, '2018-10-25 22:38:50', '2020-03-11 10:46:41'),
 (2, 'i love bangladesh', 'fixed', 200, 1000, 50, 1, '2018-12-31', 1, 1, '2018-10-27 02:59:26', '2019-03-02 05:46:48');
 
@@ -226,7 +226,7 @@ INSERT INTO `coupons` (`id`, `code`, `type`, `amount`, `minimum_amount`, `quanti
 -- Table structure for table `customers`
 --
 
-CREATE TABLE `customers` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`customers` (
   `id` int(10) UNSIGNED NOT NULL,
   `customer_group_id` int(11) NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -250,7 +250,7 @@ CREATE TABLE `customers` (
 -- Dumping data for table `customers`
 --
 
-INSERT INTO `customers` (`id`, `customer_group_id`, `name`, `company_name`, `email`, `phone_number`, `tax_no`, `address`, `city`, `state`, `postal_code`, `country`, `deposit`, `expense`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`customers` (`id`, `customer_group_id`, `name`, `company_name`, `email`, `phone_number`, `tax_no`, `address`, `city`, `state`, `postal_code`, `country`, `deposit`, `expense`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 1, 'dhiman', 'lioncoders', 'dhiman@gmail.com', '+8801111111101', NULL, 'kajir deuri', 'chittagong', NULL, NULL, 'bd', 190, 20, 1, '2018-05-12 10:00:48', '2019-02-22 05:37:27'),
 (2, 2, 'moinul', 'lioncoders', NULL, '+8801200000001', NULL, 'jamalkhan', 'chittagong', NULL, NULL, 'bd', 100, 20, 1, '2018-05-12 10:04:51', '2019-02-22 05:38:08'),
 (3, 3, 'tariq', 'big tree', NULL, '3424', NULL, 'khulshi', 'chittagong', NULL, NULL, 'bd', NULL, NULL, 1, '2018-05-12 10:07:52', '2019-03-02 05:54:07'),
@@ -267,7 +267,7 @@ INSERT INTO `customers` (`id`, `customer_group_id`, `name`, `company_name`, `ema
 -- Table structure for table `customer_groups`
 --
 
-CREATE TABLE `customer_groups` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`customer_groups` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `percentage` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -280,7 +280,7 @@ CREATE TABLE `customer_groups` (
 -- Dumping data for table `customer_groups`
 --
 
-INSERT INTO `customer_groups` (`id`, `name`, `percentage`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`customer_groups` (`id`, `name`, `percentage`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'general', '0', 1, '2018-05-12 08:09:36', '2019-03-02 06:01:35'),
 (2, 'distributor', '-10', 1, '2018-05-12 08:12:14', '2019-03-02 06:02:12'),
 (3, 'reseller', '5', 1, '2018-05-12 08:12:26', '2018-05-30 01:18:14'),
@@ -293,7 +293,7 @@ INSERT INTO `customer_groups` (`id`, `name`, `percentage`, `is_active`, `created
 -- Table structure for table `deliveries`
 --
 
-CREATE TABLE `deliveries` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`deliveries` (
   `id` int(10) UNSIGNED NOT NULL,
   `reference_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sale_id` int(11) NOT NULL,
@@ -311,7 +311,7 @@ CREATE TABLE `deliveries` (
 -- Dumping data for table `deliveries`
 --
 
-INSERT INTO `deliveries` (`id`, `reference_no`, `sale_id`, `address`, `delivered_by`, `recieved_by`, `file`, `note`, `status`, `created_at`, `updated_at`) VALUES
+INSERT INTO`heroku_ca70a97c24f370d`. `deliveries` (`id`, `reference_no`, `sale_id`, `address`, `delivered_by`, `recieved_by`, `file`, `note`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'dr-20180808-044431', 1, 'kajir deuri chittagong bd', 'abul', 'dhiman', NULL, NULL, '3', '2018-08-08 10:44:55', '2018-11-06 04:59:06'),
 (2, 'dr-20181106-105936', 88, 'mohammadpur dhaka', NULL, NULL, NULL, NULL, '2', '2018-11-06 04:59:43', '2018-11-06 05:10:38'),
 (3, 'dr-20181106-111321', 79, 'mohammadpur dhaka', NULL, NULL, NULL, NULL, '3', '2018-11-06 05:13:25', '2018-11-06 05:13:25');
@@ -322,7 +322,7 @@ INSERT INTO `deliveries` (`id`, `reference_no`, `sale_id`, `address`, `delivered
 -- Table structure for table `departments`
 --
 
-CREATE TABLE `departments` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`departments` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_active` tinyint(1) NOT NULL,
@@ -334,7 +334,7 @@ CREATE TABLE `departments` (
 -- Dumping data for table `departments`
 --
 
-INSERT INTO `departments` (`id`, `name`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`departments` (`id`, `name`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'Sale', 1, '2018-12-27 05:16:47', '2018-12-27 10:40:23'),
 (2, 'xyz', 1, '2018-12-27 10:28:47', '2018-12-27 10:28:47');
 
@@ -344,7 +344,7 @@ INSERT INTO `departments` (`id`, `name`, `is_active`, `created_at`, `updated_at`
 -- Table structure for table `deposits`
 --
 
-CREATE TABLE `deposits` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`deposits` (
   `id` int(10) UNSIGNED NOT NULL,
   `amount` double NOT NULL,
   `customer_id` int(11) NOT NULL,
@@ -358,7 +358,7 @@ CREATE TABLE `deposits` (
 -- Dumping data for table `deposits`
 --
 
-INSERT INTO `deposits` (`id`, `amount`, `customer_id`, `user_id`, `note`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`deposits` (`id`, `amount`, `customer_id`, `user_id`, `note`, `created_at`, `updated_at`) VALUES
 (1, 90, 1, 1, 'first deposit', '2018-08-25 22:48:23', '2018-08-26 01:18:55'),
 (3, 100, 2, 1, NULL, '2018-08-26 00:53:16', '2018-08-26 21:42:39'),
 (4, 50, 1, 1, NULL, '2018-09-04 22:56:19', '2018-09-04 22:56:19'),
@@ -370,7 +370,7 @@ INSERT INTO `deposits` (`id`, `amount`, `customer_id`, `user_id`, `note`, `creat
 -- Table structure for table `employees`
 --
 
-CREATE TABLE `employees` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`employees` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -390,7 +390,7 @@ CREATE TABLE `employees` (
 -- Dumping data for table `employees`
 --
 
-INSERT INTO `employees` (`id`, `name`, `email`, `phone_number`, `department_id`, `user_id`, `image`, `address`, `city`, `country`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`employees` (`id`, `name`, `email`, `phone_number`, `department_id`, `user_id`, `image`, `address`, `city`, `country`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'john', 'john@gmail.com', '10001', 2, 12, 'johngmailcom.jpg', 'GEC', 'chittagong', 'Bangladesh', 1, '2018-12-30 00:48:37', '2019-03-02 06:50:23'),
 (3, 'tests', 'test@test.com', '111', 1, NULL, NULL, NULL, NULL, NULL, 1, '2018-12-30 22:20:51', '2019-01-03 00:03:54');
 
@@ -400,7 +400,7 @@ INSERT INTO `employees` (`id`, `name`, `email`, `phone_number`, `department_id`,
 -- Table structure for table `expenses`
 --
 
-CREATE TABLE `expenses` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`expenses` (
   `id` int(10) UNSIGNED NOT NULL,
   `reference_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `expense_category_id` int(11) NOT NULL,
@@ -417,7 +417,7 @@ CREATE TABLE `expenses` (
 -- Dumping data for table `expenses`
 --
 
-INSERT INTO `expenses` (`id`, `reference_no`, `expense_category_id`, `warehouse_id`, `account_id`, `user_id`, `amount`, `note`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`expenses` (`id`, `reference_no`, `expense_category_id`, `warehouse_id`, `account_id`, `user_id`, `amount`, `note`, `created_at`, `updated_at`) VALUES
 (2, 'er-20180817-012254', 1, 2, 1, 1, 150, 'first expense...', '2018-08-17 07:22:54', '2018-08-17 07:44:13'),
 (3, 'er-20180817-014241', 1, 1, 1, 1, 125, 'second expense...', '2018-08-17 07:42:41', '2018-08-17 07:43:50'),
 (4, 'er-20181022-043609', 2, 1, 1, 1, 1000, NULL, '2018-10-22 10:36:09', '2018-10-22 10:36:09'),
@@ -451,7 +451,7 @@ INSERT INTO `expenses` (`id`, `reference_no`, `expense_category_id`, `warehouse_
 -- Table structure for table `expense_categories`
 --
 
-CREATE TABLE `expense_categories` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`expense_categories` (
   `id` int(10) UNSIGNED NOT NULL,
   `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -464,7 +464,7 @@ CREATE TABLE `expense_categories` (
 -- Dumping data for table `expense_categories`
 --
 
-INSERT INTO `expense_categories` (`id`, `code`, `name`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`expense_categories` (`id`, `code`, `name`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, '16718342', 'washing', 1, '2018-08-16 00:32:48', '2019-03-02 07:02:07'),
 (2, '60128975', 'electric bill', 1, '2018-08-16 00:39:18', '2018-08-16 00:39:18'),
 (3, '83954970', 'test', 0, '2018-08-16 00:50:28', '2018-08-16 00:51:40'),
@@ -476,7 +476,7 @@ INSERT INTO `expense_categories` (`id`, `code`, `name`, `is_active`, `created_at
 -- Table structure for table `general_settings`
 --
 
-CREATE TABLE `general_settings` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`general_settings` (
   `id` int(10) UNSIGNED NOT NULL,
   `site_title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `site_logo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -493,7 +493,7 @@ CREATE TABLE `general_settings` (
 -- Dumping data for table `general_settings`
 --
 
-INSERT INTO `general_settings` (`id`, `site_title`, `site_logo`, `currency`, `staff_access`, `date_format`, `theme`, `created_at`, `updated_at`, `currency_position`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`general_settings` (`id`, `site_title`, `site_logo`, `currency`, `staff_access`, `date_format`, `theme`, `created_at`, `updated_at`, `currency_position`) VALUES
 (1, 'SalePro', 'logo.png', 'BDT', 'own', 'd/m/Y', 'default.css', '2018-07-06 06:13:11', '2020-06-30 07:18:40', 'prefix');
 
 -- --------------------------------------------------------
@@ -535,7 +535,7 @@ INSERT INTO `gift_cards` (`id`, `card_no`, `amount`, `expense`, `customer_id`, `
 -- Table structure for table `gift_card_recharges`
 --
 
-CREATE TABLE `gift_card_recharges` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`gift_card_recharges` (
   `id` int(10) UNSIGNED NOT NULL,
   `gift_card_id` int(11) NOT NULL,
   `amount` double NOT NULL,
@@ -548,7 +548,7 @@ CREATE TABLE `gift_card_recharges` (
 -- Dumping data for table `gift_card_recharges`
 --
 
-INSERT INTO `gift_card_recharges` (`id`, `gift_card_id`, `amount`, `user_id`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`gift_card_recharges` (`id`, `gift_card_id`, `amount`, `user_id`, `created_at`, `updated_at`) VALUES
 (1, 2, 100, 1, '2018-08-24 23:08:29', '2018-08-24 23:08:29'),
 (2, 1, 200, 1, '2018-08-24 23:08:50', '2018-08-24 23:08:50'),
 (3, 1, 100, 1, '2018-09-04 23:50:41', '2018-09-04 23:50:41'),
@@ -567,7 +567,7 @@ INSERT INTO `gift_card_recharges` (`id`, `gift_card_id`, `amount`, `user_id`, `c
 -- Table structure for table `holidays`
 --
 
-CREATE TABLE `holidays` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`holidays` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(11) NOT NULL,
   `from_date` date NOT NULL,
@@ -584,7 +584,7 @@ CREATE TABLE `holidays` (
 -- Table structure for table `hrm_settings`
 --
 
-CREATE TABLE `hrm_settings` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`hrm_settings` (
   `id` int(10) UNSIGNED NOT NULL,
   `checkin` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `checkout` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -596,7 +596,7 @@ CREATE TABLE `hrm_settings` (
 -- Dumping data for table `hrm_settings`
 --
 
-INSERT INTO `hrm_settings` (`id`, `checkin`, `checkout`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`hrm_settings` (`id`, `checkin`, `checkout`, `created_at`, `updated_at`) VALUES
 (1, '10:00am', '6:00pm', '2019-01-02 02:20:08', '2019-01-02 04:20:53');
 
 -- --------------------------------------------------------
@@ -605,7 +605,7 @@ INSERT INTO `hrm_settings` (`id`, `checkin`, `checkout`, `created_at`, `updated_
 -- Table structure for table `languages`
 --
 
-CREATE TABLE `languages` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`languages` (
   `id` int(10) UNSIGNED NOT NULL,
   `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -616,7 +616,7 @@ CREATE TABLE `languages` (
 -- Dumping data for table `languages`
 --
 
-INSERT INTO `languages` (`id`, `code`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`languages` (`id`, `code`, `created_at`, `updated_at`) VALUES
 (1, 'en', '2018-07-07 22:59:17', '2019-12-24 17:34:20');
 
 -- --------------------------------------------------------
@@ -625,7 +625,7 @@ INSERT INTO `languages` (`id`, `code`, `created_at`, `updated_at`) VALUES
 -- Table structure for table `migrations`
 --
 
-CREATE TABLE `migrations` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`migrations` (
   `id` int(10) UNSIGNED NOT NULL,
   `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
@@ -635,7 +635,7 @@ CREATE TABLE `migrations` (
 -- Dumping data for table `migrations`
 --
 
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2018_02_17_060412_create_categories_table', 1),
@@ -737,7 +737,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- Table structure for table `money_transfers`
 --
 
-CREATE TABLE `money_transfers` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`money_transfers` (
   `id` int(10) UNSIGNED NOT NULL,
   `reference_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `from_account_id` int(11) NOT NULL,
@@ -751,7 +751,7 @@ CREATE TABLE `money_transfers` (
 -- Dumping data for table `money_transfers`
 --
 
-INSERT INTO `money_transfers` (`id`, `reference_no`, `from_account_id`, `to_account_id`, `amount`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`money_transfers` (`id`, `reference_no`, `from_account_id`, `to_account_id`, `amount`, `created_at`, `updated_at`) VALUES
 (2, 'mtr-20200228-071852', 1, 3, 100, '2020-02-28 13:18:52', '2020-02-28 13:18:52');
 
 -- --------------------------------------------------------
@@ -760,7 +760,7 @@ INSERT INTO `money_transfers` (`id`, `reference_no`, `from_account_id`, `to_acco
 -- Table structure for table `password_resets`
 --
 
-CREATE TABLE `password_resets` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`password_resets` (
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
@@ -772,7 +772,7 @@ CREATE TABLE `password_resets` (
 -- Table structure for table `payments`
 --
 
-CREATE TABLE `payments` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`payments` (
   `id` int(10) UNSIGNED NOT NULL,
   `payment_reference` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -791,7 +791,7 @@ CREATE TABLE `payments` (
 -- Dumping data for table `payments`
 --
 
-INSERT INTO `payments` (`id`, `payment_reference`, `user_id`, `purchase_id`, `sale_id`, `account_id`, `amount`, `change`, `paying_method`, `payment_note`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`payments` (`id`, `payment_reference`, `user_id`, `purchase_id`, `sale_id`, `account_id`, `amount`, `change`, `paying_method`, `payment_note`, `created_at`, `updated_at`) VALUES
 (33, 'spr-20180809-055453', 1, NULL, 2, 1, 1000, 0, 'Cash', NULL, '2018-08-08 23:54:53', '2018-08-08 23:54:53'),
 (34, 'spr-20180809-055553', 1, NULL, 2, 1, 1200, 0, 'Cheque', NULL, '2018-08-08 23:55:53', '2018-08-08 23:56:36'),
 (35, 'spr-20180809-063214', 1, NULL, 3, 1, 897, 0, 'Cheque', NULL, '2018-08-09 00:32:14', '2018-08-09 00:32:14'),
@@ -907,7 +907,7 @@ INSERT INTO `payments` (`id`, `payment_reference`, `user_id`, `purchase_id`, `sa
 -- Table structure for table `payment_with_cheque`
 --
 
-CREATE TABLE `payment_with_cheque` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`payment_with_cheque` (
   `id` int(10) UNSIGNED NOT NULL,
   `payment_id` int(11) NOT NULL,
   `cheque_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -919,7 +919,7 @@ CREATE TABLE `payment_with_cheque` (
 -- Dumping data for table `payment_with_cheque`
 --
 
-INSERT INTO `payment_with_cheque` (`id`, `payment_id`, `cheque_no`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`payment_with_cheque` (`id`, `payment_id`, `cheque_no`, `created_at`, `updated_at`) VALUES
 (1, 19, '23425235235', '2018-07-01 03:09:48', '2018-07-01 03:09:48'),
 (2, 24, '3123123123', '2018-07-10 01:21:32', '2018-07-10 01:21:32'),
 (3, 31, '767867678', '2018-08-08 10:36:22', '2018-08-08 10:36:22'),
@@ -941,7 +941,7 @@ INSERT INTO `payment_with_cheque` (`id`, `payment_id`, `cheque_no`, `created_at`
 -- Table structure for table `payment_with_credit_card`
 --
 
-CREATE TABLE `payment_with_credit_card` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`payment_with_credit_card` (
   `id` int(10) UNSIGNED NOT NULL,
   `payment_id` int(11) NOT NULL,
   `customer_id` int(11) DEFAULT NULL,
@@ -957,7 +957,7 @@ CREATE TABLE `payment_with_credit_card` (
 -- Table structure for table `payment_with_gift_card`
 --
 
-CREATE TABLE `payment_with_gift_card` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`payment_with_gift_card` (
   `id` int(10) UNSIGNED NOT NULL,
   `payment_id` int(11) NOT NULL,
   `gift_card_id` int(11) NOT NULL,
@@ -969,7 +969,7 @@ CREATE TABLE `payment_with_gift_card` (
 -- Dumping data for table `payment_with_gift_card`
 --
 
-INSERT INTO `payment_with_gift_card` (`id`, `payment_id`, `gift_card_id`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`payment_with_gift_card` (`id`, `payment_id`, `gift_card_id`, `created_at`, `updated_at`) VALUES
 (1, 36, 2, '2018-08-24 21:48:36', '2018-08-25 00:57:35'),
 (4, 39, 1, '2018-08-25 02:36:34', '2018-08-25 02:36:34'),
 (6, 50, 1, '2018-09-02 23:01:38', '2018-09-02 23:01:38');
@@ -980,7 +980,7 @@ INSERT INTO `payment_with_gift_card` (`id`, `payment_id`, `gift_card_id`, `creat
 -- Table structure for table `payment_with_paypal`
 --
 
-CREATE TABLE `payment_with_paypal` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`payment_with_paypal` (
   `id` int(10) UNSIGNED NOT NULL,
   `payment_id` int(11) NOT NULL,
   `transaction_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -994,7 +994,7 @@ CREATE TABLE `payment_with_paypal` (
 -- Table structure for table `payrolls`
 --
 
-CREATE TABLE `payrolls` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`payrolls` (
   `id` int(10) UNSIGNED NOT NULL,
   `reference_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -1011,7 +1011,7 @@ CREATE TABLE `payrolls` (
 -- Dumping data for table `payrolls`
 --
 
-INSERT INTO `payrolls` (`id`, `reference_no`, `employee_id`, `account_id`, `user_id`, `amount`, `paying_method`, `note`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`payrolls` (`id`, `reference_no`, `employee_id`, `account_id`, `user_id`, `amount`, `paying_method`, `note`, `created_at`, `updated_at`) VALUES
 (8, 'payroll-20190101-055231', 1, 1, 1, 100, '0', NULL, '2018-12-31 23:52:31', '2018-12-31 23:52:31'),
 (9, 'payroll-20191204-113802', 1, 1, 1, 10000, '0', NULL, '2019-12-04 17:38:02', '2019-12-04 17:38:02');
 
@@ -1021,7 +1021,7 @@ INSERT INTO `payrolls` (`id`, `reference_no`, `employee_id`, `account_id`, `user
 -- Table structure for table `permissions`
 --
 
-CREATE TABLE `permissions` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`permissions` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `guard_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1033,7 +1033,7 @@ CREATE TABLE `permissions` (
 -- Dumping data for table `permissions`
 --
 
-INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
 (4, 'products-edit', 'web', '2018-06-03 01:00:09', '2018-06-03 01:00:09'),
 (5, 'products-delete', 'web', '2018-06-03 22:54:22', '2018-06-03 22:54:22'),
 (6, 'products-add', 'web', '2018-06-04 00:34:14', '2018-06-04 00:34:14'),
@@ -1135,7 +1135,7 @@ INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at
 -- Table structure for table `pos_setting`
 --
 
-CREATE TABLE `pos_setting` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`pos_setting` (
   `id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `warehouse_id` int(11) NOT NULL,
@@ -1152,7 +1152,7 @@ CREATE TABLE `pos_setting` (
 -- Dumping data for table `pos_setting`
 --
 
-INSERT INTO `pos_setting` (`id`, `customer_id`, `warehouse_id`, `biller_id`, `product_number`, `keybord_active`, `stripe_public_key`, `stripe_secret_key`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`pos_setting` (`id`, `customer_id`, `warehouse_id`, `biller_id`, `product_number`, `keybord_active`, `stripe_public_key`, `stripe_secret_key`, `created_at`, `updated_at`) VALUES
 (1, 11, 2, 1, 4, 0, 'pk_test_ITN7KOYiIsHSCQ0UMRcgaYUB', 'sk_test_TtQQaawhEYRwa3mU9CzttrEy', '2018-09-02 03:17:04', '2020-04-17 13:59:54');
 
 -- --------------------------------------------------------
@@ -1161,7 +1161,7 @@ INSERT INTO `pos_setting` (`id`, `customer_id`, `warehouse_id`, `biller_id`, `pr
 -- Table structure for table `products`
 --
 
-CREATE TABLE `products` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`products` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1199,7 +1199,7 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `code`, `type`, `barcode_symbology`, `brand_id`, `category_id`, `unit_id`, `purchase_unit_id`, `sale_unit_id`, `cost`, `price`, `qty`, `alert_quantity`, `promotion`, `promotion_price`, `starting_date`, `last_date`, `tax_id`, `tax_method`, `image`, `file`, `is_variant`, `featured`, `product_list`, `qty_list`, `price_list`, `product_details`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`products` (`id`, `name`, `code`, `type`, `barcode_symbology`, `brand_id`, `category_id`, `unit_id`, `purchase_unit_id`, `sale_unit_id`, `cost`, `price`, `qty`, `alert_quantity`, `promotion`, `promotion_price`, `starting_date`, `last_date`, `tax_id`, `tax_method`, `image`, `file`, `is_variant`, `featured`, `product_list`, `qty_list`, `price_list`, `product_details`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'Mouse', '63920719', 'standard', 'C39', 4, 3, 1, 1, 1, '320', '400', 208, 20, 1, '350', '2020-06-30', '2020-07-31', 1, 1, 'toponemouse.jpg', NULL, NULL, 1, NULL, NULL, NULL, '<p style=@text-align: center;@>11:11:30 AM<img src=@https://pbs.twimg.com/profile_images/900037286879838208/sZhajgua_400x400.jpg@ alt=@lioncoders@ width=@400@ height=@400@ /><span style=@background-color: #ccffff;@>hello world<br /></span></p>', 1, '2018-05-12 22:23:03', '2020-07-03 12:39:14'),
 (2, 'mango', '72782608', 'standard', 'C128', NULL, 1, 1, 3, 2, '8', '12', 3251, 100, NULL, NULL, NULL, NULL, 2, 2, 'mango.jpg', NULL, NULL, 1, NULL, NULL, NULL, '', 1, '2018-05-12 22:38:31', '2020-04-06 13:41:11'),
 (3, 'Earphone', '85415108', 'standard', 'C128', 4, 2, 1, 1, 1, '200', '250', 172, 25, 1, '220', '2018-05-13', '2018-05-31', NULL, 1, 'airphonesamsung.jpg', NULL, NULL, 1, NULL, NULL, NULL, '<p>Earphone with good <strong>sound quality.</strong></p>', 1, '2018-05-12 22:39:55', '2020-06-22 09:49:57'),
@@ -1237,7 +1237,7 @@ INSERT INTO `products` (`id`, `name`, `code`, `type`, `barcode_symbology`, `bran
 -- Table structure for table `product_adjustments`
 --
 
-CREATE TABLE `product_adjustments` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`product_adjustments` (
   `id` int(10) UNSIGNED NOT NULL,
   `adjustment_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -1253,7 +1253,7 @@ CREATE TABLE `product_adjustments` (
 -- Table structure for table `product_purchases`
 --
 
-CREATE TABLE `product_purchases` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`product_purchases` (
   `id` int(10) UNSIGNED NOT NULL,
   `purchase_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -1274,7 +1274,7 @@ CREATE TABLE `product_purchases` (
 -- Dumping data for table `product_purchases`
 --
 
-INSERT INTO `product_purchases` (`id`, `purchase_id`, `product_id`, `variant_id`, `qty`, `recieved`, `purchase_unit_id`, `net_unit_cost`, `discount`, `tax_rate`, `tax`, `total`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`product_purchases` (`id`, `purchase_id`, `product_id`, `variant_id`, `qty`, `recieved`, `purchase_unit_id`, `net_unit_cost`, `discount`, `tax_rate`, `tax`, `total`, `created_at`, `updated_at`) VALUES
 (59, 12, 4, NULL, 200, 200, 1, 1, 0, 0, 0, 200, '2018-08-08 23:48:36', '2018-08-08 23:48:36'),
 (60, 12, 5, NULL, 100, 100, 1, 100, 0, 0, 0, 10000, '2018-08-08 23:48:36', '2018-08-08 23:48:36'),
 (66, 13, 2, NULL, 100, 100, 3, 166.96, 0, 15, 2504.35, 19200, '2018-08-08 23:49:55', '2018-08-08 23:49:55'),
@@ -1357,7 +1357,7 @@ INSERT INTO `product_purchases` (`id`, `purchase_id`, `product_id`, `variant_id`
 -- Table structure for table `product_quotation`
 --
 
-CREATE TABLE `product_quotation` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`product_quotation` (
   `id` int(10) UNSIGNED NOT NULL,
   `quotation_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -1377,7 +1377,7 @@ CREATE TABLE `product_quotation` (
 -- Dumping data for table `product_quotation`
 --
 
-INSERT INTO `product_quotation` (`id`, `quotation_id`, `product_id`, `variant_id`, `qty`, `sale_unit_id`, `net_unit_price`, `discount`, `tax_rate`, `tax`, `total`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`product_quotation` (`id`, `quotation_id`, `product_id`, `variant_id`, `qty`, `sale_unit_id`, `net_unit_price`, `discount`, `tax_rate`, `tax`, `total`, `created_at`, `updated_at`) VALUES
 (2, 1, 1, NULL, 1, 2, 5030, 10, 15, 754.5, 5784.5, '2018-08-08 23:52:50', '2018-08-28 00:09:57'),
 (3, 1, 4, NULL, 50, 1, 1.5, 25, 10, 7.5, 82.5, '2018-08-08 23:53:25', '2018-08-28 00:34:36'),
 (4, 1, 2, NULL, 6, 1, 9.55, 0, 10, 5.73, 63, '2018-08-28 01:03:48', '2018-08-28 01:07:07'),
@@ -1392,7 +1392,7 @@ INSERT INTO `product_quotation` (`id`, `quotation_id`, `product_id`, `variant_id
 -- Table structure for table `product_returns`
 --
 
-CREATE TABLE `product_returns` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`product_returns` (
   `id` int(10) UNSIGNED NOT NULL,
   `return_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -1425,7 +1425,7 @@ INSERT INTO `product_returns` (`id`, `return_id`, `product_id`, `variant_id`, `q
 -- Table structure for table `product_sales`
 --
 
-CREATE TABLE `product_sales` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`product_sales` (
   `id` int(10) UNSIGNED NOT NULL,
   `sale_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -1445,7 +1445,7 @@ CREATE TABLE `product_sales` (
 -- Dumping data for table `product_sales`
 --
 
-INSERT INTO `product_sales` (`id`, `sale_id`, `product_id`, `variant_id`, `qty`, `sale_unit_id`, `net_unit_price`, `discount`, `tax_rate`, `tax`, `total`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`product_sales` (`id`, `sale_id`, `product_id`, `variant_id`, `qty`, `sale_unit_id`, `net_unit_price`, `discount`, `tax_rate`, `tax`, `total`, `created_at`, `updated_at`) VALUES
 (1, 1, 2, NULL, 1, 2, 104.35, 0, 15, 15.65, 120, '2018-08-08 10:36:23', '2018-08-08 11:13:27'),
 (3, 1, 5, NULL, 2, 1, 115, 10, 0, 0, 230, '2018-08-08 11:13:28', '2018-08-08 11:13:28'),
 (4, 2, 1, NULL, 10, 1, 420, 0, 10, 420, 4620, '2018-08-08 23:54:53', '2018-08-08 23:54:53'),
@@ -1614,7 +1614,7 @@ INSERT INTO `product_sales` (`id`, `sale_id`, `product_id`, `variant_id`, `qty`,
 -- Table structure for table `product_transfer`
 --
 
-CREATE TABLE `product_transfer` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`product_transfer` (
   `id` int(10) UNSIGNED NOT NULL,
   `transfer_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -1633,7 +1633,7 @@ CREATE TABLE `product_transfer` (
 -- Dumping data for table `product_transfer`
 --
 
-INSERT INTO `product_transfer` (`id`, `transfer_id`, `product_id`, `variant_id`, `qty`, `purchase_unit_id`, `net_unit_cost`, `tax_rate`, `tax`, `total`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`product_transfer` (`id`, `transfer_id`, `product_id`, `variant_id`, `qty`, `purchase_unit_id`, `net_unit_cost`, `tax_rate`, `tax`, `total`, `created_at`, `updated_at`) VALUES
 (1, 1, 4, NULL, 100, 1, 1, 0, 0, 100, '2018-08-08 11:17:10', '2018-12-24 22:16:55'),
 (7, 6, 48, 3, 1, 1, 2, 0, 0, 2, '2019-12-05 13:55:04', '2019-12-05 14:09:42'),
 (11, 8, 5, NULL, 10, 1, 100, 0, 0, 1000, '2020-01-22 06:30:59', '2020-01-22 06:30:59');
@@ -1644,7 +1644,7 @@ INSERT INTO `product_transfer` (`id`, `transfer_id`, `product_id`, `variant_id`,
 -- Table structure for table `product_variants`
 --
 
-CREATE TABLE `product_variants` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`product_variants` (
   `id` int(10) UNSIGNED NOT NULL,
   `product_id` int(11) NOT NULL,
   `variant_id` int(11) NOT NULL,
@@ -1660,7 +1660,7 @@ CREATE TABLE `product_variants` (
 -- Dumping data for table `product_variants`
 --
 
-INSERT INTO `product_variants` (`id`, `product_id`, `variant_id`, `position`, `item_code`, `additional_price`, `qty`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`product_variants` (`id`, `product_id`, `variant_id`, `position`, `item_code`, `additional_price`, `qty`, `created_at`, `updated_at`) VALUES
 (3, 48, 3, 1, 'S-93475396', NULL, 13, '2019-11-21 07:03:04', '2020-01-10 11:22:49'),
 (5, 48, 5, 3, 'L-93475396', 50, 11, '2019-11-24 06:07:20', '2020-03-16 14:08:26'),
 (6, 48, 2, 2, 'M-93475396', 10, 14, '2019-11-24 07:17:07', '2020-01-10 11:22:06'),
@@ -1673,7 +1673,7 @@ INSERT INTO `product_variants` (`id`, `product_id`, `variant_id`, `position`, `i
 -- Table structure for table `product_warehouse`
 --
 
-CREATE TABLE `product_warehouse` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`product_warehouse` (
   `id` int(10) UNSIGNED NOT NULL,
   `product_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `variant_id` int(11) DEFAULT NULL,
@@ -1687,7 +1687,7 @@ CREATE TABLE `product_warehouse` (
 -- Dumping data for table `product_warehouse`
 --
 
-INSERT INTO `product_warehouse` (`id`, `product_id`, `variant_id`, `warehouse_id`, `qty`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`product_warehouse` (`id`, `product_id`, `variant_id`, `warehouse_id`, `qty`, `created_at`, `updated_at`) VALUES
 (10, '1', NULL, 1, 136.5, '2018-08-08 08:30:12', '2020-01-17 05:11:26'),
 (11, '2', NULL, 1, 1404, '2018-08-08 08:30:12', '2019-12-05 04:31:49'),
 (12, '3', NULL, 1, 104, '2018-08-08 08:30:13', '2020-02-26 06:16:35'),
@@ -1726,7 +1726,7 @@ INSERT INTO `product_warehouse` (`id`, `product_id`, `variant_id`, `warehouse_id
 -- Table structure for table `purchases`
 --
 
-CREATE TABLE `purchases` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`purchases` (
   `id` int(10) UNSIGNED NOT NULL,
   `reference_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -1755,7 +1755,7 @@ CREATE TABLE `purchases` (
 -- Dumping data for table `purchases`
 --
 
-INSERT INTO `purchases` (`id`, `reference_no`, `user_id`, `warehouse_id`, `supplier_id`, `item`, `total_qty`, `total_discount`, `total_tax`, `total_cost`, `order_tax_rate`, `order_tax`, `order_discount`, `shipping_cost`, `grand_total`, `paid_amount`, `status`, `payment_status`, `document`, `note`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`purchases` (`id`, `reference_no`, `user_id`, `warehouse_id`, `supplier_id`, `item`, `total_qty`, `total_discount`, `total_tax`, `total_cost`, `order_tax_rate`, `order_tax`, `order_discount`, `shipping_cost`, `grand_total`, `paid_amount`, `status`, `payment_status`, `document`, `note`, `created_at`, `updated_at`) VALUES
 (12, 'pr-20180808-051614', 1, 2, 3, 2, 300, 0, 0, 10200, 0, 0, 0, 0, 10200, 0, 1, 1, NULL, NULL, '2018-08-08 11:16:14', '2018-09-22 02:53:24'),
 (13, 'pr-20180809-054723', 1, 2, 3, 4, 410, 0, 7304.35, 92600, 10, 9260, 0, 500, 102360, 300, 1, 1, NULL, NULL, '2018-08-08 23:47:23', '2018-08-30 03:07:18'),
 (14, 'pr-20180809-012348', 1, 1, 1, 5, 400, 0, 4452.17, 75300, 10, 7480, 500, 1000, 83280, 0, 1, 1, NULL, NULL, '2018-08-09 07:23:48', '2018-08-09 07:23:48'),
@@ -1805,7 +1805,7 @@ INSERT INTO `purchases` (`id`, `reference_no`, `user_id`, `warehouse_id`, `suppl
 -- Table structure for table `purchase_product_return`
 --
 
-CREATE TABLE `purchase_product_return` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`purchase_product_return` (
   `id` int(10) UNSIGNED NOT NULL,
   `return_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -1825,7 +1825,7 @@ CREATE TABLE `purchase_product_return` (
 -- Dumping data for table `purchase_product_return`
 --
 
-INSERT INTO `purchase_product_return` (`id`, `return_id`, `product_id`, `variant_id`, `qty`, `purchase_unit_id`, `net_unit_cost`, `discount`, `tax_rate`, `tax`, `total`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`purchase_product_return` (`id`, `return_id`, `product_id`, `variant_id`, `qty`, `purchase_unit_id`, `net_unit_cost`, `discount`, `tax_rate`, `tax`, `total`, `created_at`, `updated_at`) VALUES
 (1, 1, 3, NULL, 1, 1, 200, 0, 0, 0, 200, NULL, '2019-12-07 11:19:03');
 
 -- --------------------------------------------------------
@@ -1834,7 +1834,7 @@ INSERT INTO `purchase_product_return` (`id`, `return_id`, `product_id`, `variant
 -- Table structure for table `quotations`
 --
 
-CREATE TABLE `quotations` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`quotations` (
   `id` int(10) UNSIGNED NOT NULL,
   `reference_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -1863,7 +1863,7 @@ CREATE TABLE `quotations` (
 -- Dumping data for table `quotations`
 --
 
-INSERT INTO `quotations` (`id`, `reference_no`, `user_id`, `biller_id`, `supplier_id`, `customer_id`, `warehouse_id`, `item`, `total_qty`, `total_discount`, `total_tax`, `total_price`, `order_tax_rate`, `order_tax`, `order_discount`, `shipping_cost`, `grand_total`, `quotation_status`, `document`, `note`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`quotations` (`id`, `reference_no`, `user_id`, `biller_id`, `supplier_id`, `customer_id`, `warehouse_id`, `item`, `total_qty`, `total_discount`, `total_tax`, `total_price`, `order_tax_rate`, `order_tax`, `order_discount`, `shipping_cost`, `grand_total`, `quotation_status`, `document`, `note`, `created_at`, `updated_at`) VALUES
 (1, 'qr-20180809-055250', 1, 1, 3, 3, 1, 3, 57, 35, 767.73, 5930, 10, 583, 100, 500, 6913, 2, NULL, 'first quotation...', '2018-08-08 23:52:50', '2018-09-04 03:32:16'),
 (2, 'qr-20180904-040257', 1, 1, NULL, 1, 1, 2, 3.5, 0, 0, 76, 0, 0, 1.6, 2.7, 77.1, 1, NULL, NULL, '2018-09-03 22:02:57', '2018-09-21 07:05:57'),
 (3, 'qr-20181023-061249', 9, 1, 3, 11, 1, 2, 2, 0, 40, 453, 0, 0, 0, 0, 453, 2, NULL, NULL, '2018-10-23 00:12:49', '2019-12-21 06:41:36');
@@ -1901,7 +1901,7 @@ CREATE TABLE `returns` (
 -- Dumping data for table `returns`
 --
 
-INSERT INTO `returns` (`id`, `reference_no`, `user_id`, `customer_id`, `warehouse_id`, `biller_id`, `account_id`, `item`, `total_qty`, `total_discount`, `total_tax`, `total_price`, `order_tax_rate`, `order_tax`, `grand_total`, `document`, `return_note`, `staff_note`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`returns` (`id`, `reference_no`, `user_id`, `customer_id`, `warehouse_id`, `biller_id`, `account_id`, `item`, `total_qty`, `total_discount`, `total_tax`, `total_price`, `order_tax_rate`, `order_tax`, `grand_total`, `document`, `return_note`, `staff_note`, `created_at`, `updated_at`) VALUES
 (2, 'rr-20180809-055834', 1, 1, 1, 1, 1, 1, 20, 0, 0, 40, 10, 4, 44, NULL, NULL, NULL, '2018-08-08 23:58:34', '2018-08-08 23:58:34'),
 (3, 'rr-20180828-045527', 1, 1, 2, 1, 1, 1, 2, 0, 0, 44, 0, 0, 44, NULL, NULL, NULL, '2018-08-27 22:55:27', '2018-09-20 11:03:47'),
 (5, 'rr-20181007-082129', 1, 11, 2, 2, 1, 1, 1, 0, 0, 250, 0, 0, 250, NULL, NULL, NULL, '2018-10-07 02:21:29', '2018-12-25 22:16:08'),
@@ -1913,7 +1913,7 @@ INSERT INTO `returns` (`id`, `reference_no`, `user_id`, `customer_id`, `warehous
 -- Table structure for table `return_purchases`
 --
 
-CREATE TABLE `return_purchases` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`return_purchases` (
   `id` int(10) UNSIGNED NOT NULL,
   `reference_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `supplier_id` int(11) DEFAULT NULL,
@@ -1939,7 +1939,7 @@ CREATE TABLE `return_purchases` (
 -- Dumping data for table `return_purchases`
 --
 
-INSERT INTO `return_purchases` (`id`, `reference_no`, `supplier_id`, `warehouse_id`, `user_id`, `account_id`, `item`, `total_qty`, `total_discount`, `total_tax`, `total_cost`, `order_tax_rate`, `order_tax`, `grand_total`, `document`, `return_note`, `staff_note`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`return_purchases` (`id`, `reference_no`, `supplier_id`, `warehouse_id`, `user_id`, `account_id`, `item`, `total_qty`, `total_discount`, `total_tax`, `total_cost`, `order_tax_rate`, `order_tax`, `grand_total`, `document`, `return_note`, `staff_note`, `created_at`, `updated_at`) VALUES
 (1, 'prr-20190101-090759', 3, 1, 1, 1, 1, 1, 0, 0, 200, 0, 0, 200, NULL, NULL, NULL, '2019-01-01 03:07:59', '2019-12-07 11:19:03');
 
 -- --------------------------------------------------------
@@ -1948,7 +1948,7 @@ INSERT INTO `return_purchases` (`id`, `reference_no`, `supplier_id`, `warehouse_
 -- Table structure for table `roles`
 --
 
-CREATE TABLE `roles` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`roles` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -1962,7 +1962,7 @@ CREATE TABLE `roles` (
 -- Dumping data for table `roles`
 --
 
-INSERT INTO `roles` (`id`, `name`, `description`, `guard_name`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`roles` (`id`, `name`, `description`, `guard_name`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'Admin', 'admin can access all data...', 'web', 1, '2018-06-01 23:46:44', '2018-06-02 23:13:05'),
 (2, 'Owner', 'Owner of shop...', 'web', 1, '2018-10-22 02:38:13', '2018-10-22 02:38:13'),
 (4, 'staff', 'staff has specific acess...', 'web', 1, '2018-06-02 00:05:27', '2018-06-02 00:05:27');
@@ -1973,7 +1973,7 @@ INSERT INTO `roles` (`id`, `name`, `description`, `guard_name`, `is_active`, `cr
 -- Table structure for table `role_has_permissions`
 --
 
-CREATE TABLE `role_has_permissions` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`role_has_permissions` (
   `permission_id` int(10) UNSIGNED NOT NULL,
   `role_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1982,7 +1982,7 @@ CREATE TABLE `role_has_permissions` (
 -- Dumping data for table `role_has_permissions`
 --
 
-INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`role_has_permissions` (`permission_id`, `role_id`) VALUES
 (4, 1),
 (4, 2),
 (5, 1),
@@ -2183,7 +2183,7 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 -- Table structure for table `sales`
 --
 
-CREATE TABLE `sales` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`sales` (
   `id` int(10) UNSIGNED NOT NULL,
   `reference_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -2216,7 +2216,7 @@ CREATE TABLE `sales` (
 -- Dumping data for table `sales`
 --
 
-INSERT INTO `sales` (`id`, `reference_no`, `user_id`, `customer_id`, `warehouse_id`, `biller_id`, `item`, `total_qty`, `total_discount`, `total_tax`, `total_price`, `grand_total`, `order_tax_rate`, `order_tax`, `order_discount`, `coupon_id`, `coupon_discount`, `shipping_cost`, `sale_status`, `payment_status`, `document`, `paid_amount`, `sale_note`, `staff_note`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`sales` (`id`, `reference_no`, `user_id`, `customer_id`, `warehouse_id`, `biller_id`, `item`, `total_qty`, `total_discount`, `total_tax`, `total_price`, `grand_total`, `order_tax_rate`, `order_tax`, `order_discount`, `coupon_id`, `coupon_discount`, `shipping_cost`, `sale_status`, `payment_status`, `document`, `paid_amount`, `sale_note`, `staff_note`, `created_at`, `updated_at`) VALUES
 (1, 'sr-20180808-043622', 1, 1, 1, 1, 2, 3, 10, 15.65, 350, 380, 10, 30, 50, NULL, NULL, 50, 1, 2, NULL, 0, 'ukgjkgjkgkj', 'gjkgjkgkujg', '2018-08-08 10:36:22', '2018-10-06 09:25:29'),
 (2, 'sr-20180809-055453', 1, 3, 1, 1, 3, 63, 0, 469.3, 5103, 5503, 0, 0, 100, NULL, NULL, 500, 1, 2, NULL, 2200, NULL, NULL, '2018-08-08 23:54:53', '2018-08-08 23:56:35'),
 (3, 'posr-20180809-063214', 1, 2, 2, 2, 3, 26, 0, 0, 897, 897, 0, 0, NULL, NULL, NULL, NULL, 1, 4, NULL, 897, NULL, NULL, '2018-08-09 00:32:14', '2018-08-09 00:32:14'),
@@ -2308,7 +2308,7 @@ INSERT INTO `sales` (`id`, `reference_no`, `user_id`, `customer_id`, `warehouse_
 -- Table structure for table `stock_counts`
 --
 
-CREATE TABLE `stock_counts` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`stock_counts` (
   `id` int(10) UNSIGNED NOT NULL,
   `reference_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `warehouse_id` int(11) NOT NULL,
@@ -2328,7 +2328,7 @@ CREATE TABLE `stock_counts` (
 -- Dumping data for table `stock_counts`
 --
 
-INSERT INTO `stock_counts` (`id`, `reference_no`, `warehouse_id`, `category_id`, `brand_id`, `user_id`, `type`, `initial_file`, `final_file`, `note`, `is_adjusted`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`stock_counts` (`id`, `reference_no`, `warehouse_id`, `category_id`, `brand_id`, `user_id`, `type`, `initial_file`, `final_file`, `note`, `is_adjusted`, `created_at`, `updated_at`) VALUES
 (1, 'scr-20190228-124939', 2, NULL, NULL, 1, 'full', '20190228-124939.csv', NULL, NULL, 0, '2019-02-28 06:49:39', '2019-02-28 06:49:39');
 
 -- --------------------------------------------------------
@@ -2337,7 +2337,7 @@ INSERT INTO `stock_counts` (`id`, `reference_no`, `warehouse_id`, `category_id`,
 -- Table structure for table `suppliers`
 --
 
-CREATE TABLE `suppliers` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`suppliers` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -2359,7 +2359,7 @@ CREATE TABLE `suppliers` (
 -- Dumping data for table `suppliers`
 --
 
-INSERT INTO `suppliers` (`id`, `name`, `image`, `company_name`, `vat_number`, `email`, `phone_number`, `address`, `city`, `state`, `postal_code`, `country`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`suppliers` (`id`, `name`, `image`, `company_name`, `vat_number`, `email`, `phone_number`, `address`, `city`, `state`, `postal_code`, `country`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'abdullah', 'globaltouch.jpg', 'global touch', NULL, 'abdullah@globaltouch.com', '231231', 'fsdfs', 'fsdfs', NULL, NULL, 'bd', 1, '2018-05-12 22:06:34', '2019-12-21 10:58:47'),
 (2, 'test', 'lion.jpg', 'lion', NULL, 'lion@gmail.com', '242', 'gfdg', 'fgd', NULL, NULL, NULL, 0, '2018-05-29 23:59:41', '2018-05-30 00:00:06'),
 (3, 'ismail', NULL, 'techbd', NULL, 'ismail@test.com', '23123123', 'mohammadpur', 'dhaka', NULL, NULL, 'bangladesh', 1, '2018-07-20 04:34:17', '2018-07-20 04:34:17'),
@@ -2372,7 +2372,7 @@ INSERT INTO `suppliers` (`id`, `name`, `image`, `company_name`, `vat_number`, `e
 -- Table structure for table `taxes`
 --
 
-CREATE TABLE `taxes` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`taxes` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `rate` double NOT NULL,
@@ -2385,7 +2385,7 @@ CREATE TABLE `taxes` (
 -- Dumping data for table `taxes`
 --
 
-INSERT INTO `taxes` (`id`, `name`, `rate`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`taxes` (`id`, `name`, `rate`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'vat@10', 10, 1, '2018-05-12 09:58:30', '2019-03-02 11:46:10'),
 (2, 'vat@15', 15, 1, '2018-05-12 09:58:43', '2018-05-27 23:35:05'),
 (3, 'test', 6, 0, '2018-05-27 23:32:54', '2018-05-27 23:34:44'),
@@ -2397,7 +2397,7 @@ INSERT INTO `taxes` (`id`, `name`, `rate`, `is_active`, `created_at`, `updated_a
 -- Table structure for table `transfers`
 --
 
-CREATE TABLE `transfers` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`transfers` (
   `id` int(10) UNSIGNED NOT NULL,
   `reference_no` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -2420,7 +2420,7 @@ CREATE TABLE `transfers` (
 -- Dumping data for table `transfers`
 --
 
-INSERT INTO `transfers` (`id`, `reference_no`, `user_id`, `status`, `from_warehouse_id`, `to_warehouse_id`, `item`, `total_qty`, `total_tax`, `total_cost`, `shipping_cost`, `grand_total`, `document`, `note`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`transfers` (`id`, `reference_no`, `user_id`, `status`, `from_warehouse_id`, `to_warehouse_id`, `item`, `total_qty`, `total_tax`, `total_cost`, `shipping_cost`, `grand_total`, `document`, `note`, `created_at`, `updated_at`) VALUES
 (1, 'tr-20180808-051710', 1, 1, 2, 1, 1, 100, 0, 100, 0, 100, NULL, NULL, '2018-08-08 11:17:10', '2018-12-24 22:16:55'),
 (6, 'tr-20191205-075504', 1, 1, 1, 2, 1, 1, 0, 2, 0, 2, NULL, NULL, '2019-12-05 13:55:04', '2019-12-05 14:09:42'),
 (8, 'tr-20200122-123058', 1, 1, 1, 2, 1, 10, 0, 1000, NULL, 1000, NULL, NULL, '2020-01-22 06:30:58', '2020-01-22 06:30:58');
@@ -2431,7 +2431,7 @@ INSERT INTO `transfers` (`id`, `reference_no`, `user_id`, `status`, `from_wareho
 -- Table structure for table `units`
 --
 
-CREATE TABLE `units` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`units` (
   `id` int(10) UNSIGNED NOT NULL,
   `unit_code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `unit_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -2447,7 +2447,7 @@ CREATE TABLE `units` (
 -- Dumping data for table `units`
 --
 
-INSERT INTO `units` (`id`, `unit_code`, `unit_name`, `base_unit`, `operator`, `operation_value`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`units` (`id`, `unit_code`, `unit_name`, `base_unit`, `operator`, `operation_value`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'pc', 'Piece', NULL, '*', 1, 1, '2018-05-12 02:27:46', '2018-08-17 21:41:53'),
 (2, 'dozen', 'dozen box', 1, '*', 12, 1, '2018-05-12 09:57:05', '2018-05-12 09:57:05'),
 (3, 'cartoon', 'cartoon box', 1, '*', 24, 1, '2018-05-12 09:57:45', '2020-03-11 10:36:59'),
@@ -2464,7 +2464,7 @@ INSERT INTO `units` (`id`, `unit_code`, `unit_name`, `base_unit`, `operator`, `o
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -2485,7 +2485,7 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `phone`, `company_name`, `role_id`, `biller_id`, `warehouse_id`, `is_active`, `is_deleted`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`users` (`id`, `name`, `email`, `password`, `remember_token`, `phone`, `company_name`, `role_id`, `biller_id`, `warehouse_id`, `is_active`, `is_deleted`, `created_at`, `updated_at`) VALUES
 (1, 'admin', 'admin@gmail.com', '$2y$10$DWAHTfjcvwCpOCXaJg11MOhsqns03uvlwiSUOQwkHL2YYrtrXPcL6', '6EFb2fspgPcCfHqcisgPWKVG2EH6LA5WKVMmIrBXx3WVy2kXkuLkwSd5H9vr', '12112', 'lioncoders', 1, NULL, NULL, 1, 0, '2018-06-02 03:24:15', '2018-09-05 00:14:15'),
 (3, 'dhiman da', 'dhiman@gmail.com', '$2y$10$Fef6vu5E67nm11hX7V5a2u1ThNCQ6n9DRCvRF9TD7stk.Pmt2R6O.', '5ehQM6JIfiQfROgTbB5let0Z93vjLHS7rd9QD5RPNgOxli3xdo7fykU7vtTt', '212', 'lioncoders', 1, NULL, NULL, 1, 0, '2018-06-13 22:00:31', '2018-12-25 03:47:07'),
 (6, 'test', 'test@gmail.com', '$2y$10$TDAeHcVqHyCmurki0wjLZeIl1SngKX3WLOhyTiCoZG3souQfqv.LS', 'KpW1gYYlOFacumklO2IcRfSsbC3KcWUZzOI37gqoqM388Xie6KdhaOHIFEYm', '1234', '212312', 4, NULL, NULL, 0, 1, '2018-06-23 03:05:33', '2018-06-23 03:13:45'),
@@ -2502,7 +2502,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `phone
 -- Table structure for table `variants`
 --
 
-CREATE TABLE `variants` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`variants` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -2513,7 +2513,7 @@ CREATE TABLE `variants` (
 -- Dumping data for table `variants`
 --
 
-INSERT INTO `variants` (`id`, `name`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`variants` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (2, 'Medium', '2019-11-21 07:03:04', '2019-11-24 08:43:52'),
 (3, 'Small', '2019-11-21 07:03:04', '2019-11-24 08:43:52'),
 (5, 'Large', '2019-11-24 06:07:20', '2019-11-24 08:44:56'),
@@ -2526,7 +2526,7 @@ INSERT INTO `variants` (`id`, `name`, `created_at`, `updated_at`) VALUES
 -- Table structure for table `warehouses`
 --
 
-CREATE TABLE `warehouses` (
+CREATE TABLE `heroku_ca70a97c24f370d`.`warehouses` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -2541,7 +2541,7 @@ CREATE TABLE `warehouses` (
 -- Dumping data for table `warehouses`
 --
 
-INSERT INTO `warehouses` (`id`, `name`, `phone`, `email`, `address`, `is_active`, `created_at`, `updated_at`) VALUES
+INSERT INTO `heroku_ca70a97c24f370d`.`warehouses` (`id`, `name`, `phone`, `email`, `address`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'warehouse 1', '2312121', 'war1@lion.com', 'khatungonj, chittagong', 1, '2018-05-12 07:51:44', '2019-03-02 15:40:17'),
 (2, 'warehouse 2', '1234', NULL, 'boropul, chittagong', 1, '2018-05-12 08:09:03', '2018-06-19 22:30:38'),
 (3, 'test', NULL, NULL, 'dqwdeqw', 0, '2018-05-30 00:14:23', '2018-05-30 00:14:47'),
@@ -2554,344 +2554,344 @@ INSERT INTO `warehouses` (`id`, `name`, `phone`, `email`, `address`, `is_active`
 --
 -- Indexes for table `accounts`
 --
-ALTER TABLE `accounts`
+ALTER TABLE `heroku_ca70a97c24f370d`.`accounts`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `adjustments`
 --
-ALTER TABLE `adjustments`
+ALTER TABLE `heroku_ca70a97c24f370d`.`adjustments`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `attendances`
 --
-ALTER TABLE `attendances`
+ALTER TABLE `heroku_ca70a97c24f370d`.`attendances`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `billers`
 --
-ALTER TABLE `billers`
+ALTER TABLE `heroku_ca70a97c24f370d`.`billers`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `brands`
 --
-ALTER TABLE `brands`
+ALTER TABLE `heroku_ca70a97c24f370d`.`brands`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `categories`
 --
-ALTER TABLE `categories`
+ALTER TABLE `heroku_ca70a97c24f370d`.`categories`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `coupons`
 --
-ALTER TABLE `coupons`
+ALTER TABLE `heroku_ca70a97c24f370d`.`coupons`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `customers`
 --
-ALTER TABLE `customers`
+ALTER TABLE `heroku_ca70a97c24f370d`.`customers`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `customer_groups`
 --
-ALTER TABLE `customer_groups`
+ALTER TABLE `heroku_ca70a97c24f370d`.`customer_groups`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `deliveries`
 --
-ALTER TABLE `deliveries`
+ALTER TABLE `heroku_ca70a97c24f370d`.`deliveries`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `departments`
 --
-ALTER TABLE `departments`
+ALTER TABLE `heroku_ca70a97c24f370d`.`departments`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `deposits`
 --
-ALTER TABLE `deposits`
+ALTER TABLE `heroku_ca70a97c24f370d`.`deposits`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `employees`
 --
-ALTER TABLE `employees`
+ALTER TABLE `heroku_ca70a97c24f370d`.`employees`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `expenses`
 --
-ALTER TABLE `expenses`
+ALTER TABLE `heroku_ca70a97c24f370d`.`expenses`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `expense_categories`
 --
-ALTER TABLE `expense_categories`
+ALTER TABLE `heroku_ca70a97c24f370d`.`expense_categories`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `general_settings`
 --
-ALTER TABLE `general_settings`
+ALTER TABLE `heroku_ca70a97c24f370d`.`general_settings`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `gift_cards`
 --
-ALTER TABLE `gift_cards`
+ALTER TABLE `heroku_ca70a97c24f370d`.`gift_cards`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `gift_card_recharges`
 --
-ALTER TABLE `gift_card_recharges`
+ALTER TABLE `heroku_ca70a97c24f370d`.`gift_card_recharges`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `holidays`
 --
-ALTER TABLE `holidays`
+ALTER TABLE `heroku_ca70a97c24f370d`.`holidays`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `hrm_settings`
 --
-ALTER TABLE `hrm_settings`
+ALTER TABLE `heroku_ca70a97c24f370d`.`hrm_settings`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `languages`
 --
-ALTER TABLE `languages`
+ALTER TABLE `heroku_ca70a97c24f370d`.`languages`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `migrations`
 --
-ALTER TABLE `migrations`
+ALTER TABLE `heroku_ca70a97c24f370d`.`migrations`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `money_transfers`
 --
-ALTER TABLE `money_transfers`
+ALTER TABLE `heroku_ca70a97c24f370d`.`money_transfers`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `password_resets`
 --
-ALTER TABLE `password_resets`
+ALTER TABLE `heroku_ca70a97c24f370d`.`password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
 -- Indexes for table `payments`
 --
-ALTER TABLE `payments`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payments`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `payment_with_cheque`
 --
-ALTER TABLE `payment_with_cheque`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payment_with_cheque`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `payment_with_credit_card`
 --
-ALTER TABLE `payment_with_credit_card`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payment_with_credit_card`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `payment_with_gift_card`
 --
-ALTER TABLE `payment_with_gift_card`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payment_with_gift_card`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `payment_with_paypal`
 --
-ALTER TABLE `payment_with_paypal`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payment_with_paypal`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `payrolls`
 --
-ALTER TABLE `payrolls`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payrolls`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `permissions`
 --
-ALTER TABLE `permissions`
+ALTER TABLE `heroku_ca70a97c24f370d`.`permissions`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `pos_setting`
 --
-ALTER TABLE `pos_setting`
+ALTER TABLE `heroku_ca70a97c24f370d`.`pos_setting`
   ADD UNIQUE KEY `pos_setting_id_unique` (`id`);
 
 --
 -- Indexes for table `products`
 --
-ALTER TABLE `products`
+ALTER TABLE `heroku_ca70a97c24f370d`.`products`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product_adjustments`
 --
-ALTER TABLE `product_adjustments`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_adjustments`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product_purchases`
 --
-ALTER TABLE `product_purchases`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_purchases`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product_quotation`
 --
-ALTER TABLE `product_quotation`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_quotation`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product_returns`
 --
-ALTER TABLE `product_returns`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_returns`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product_sales`
 --
-ALTER TABLE `product_sales`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_sales`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product_transfer`
 --
-ALTER TABLE `product_transfer`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_transfer`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product_variants`
 --
-ALTER TABLE `product_variants`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_variants`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product_warehouse`
 --
-ALTER TABLE `product_warehouse`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_warehouse`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `purchases`
 --
-ALTER TABLE `purchases`
+ALTER TABLE `heroku_ca70a97c24f370d`.`purchases`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `purchase_product_return`
 --
-ALTER TABLE `purchase_product_return`
+ALTER TABLE `heroku_ca70a97c24f370d`.`purchase_product_return`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `quotations`
 --
-ALTER TABLE `quotations`
+ALTER TABLE `heroku_ca70a97c24f370d`.`quotations`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `returns`
 --
-ALTER TABLE `returns`
+ALTER TABLE `heroku_ca70a97c24f370d`.`returns`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `return_purchases`
 --
-ALTER TABLE `return_purchases`
+ALTER TABLE `heroku_ca70a97c24f370d`.`return_purchases`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `roles`
 --
-ALTER TABLE `roles`
+ALTER TABLE `heroku_ca70a97c24f370d`.`roles`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `role_has_permissions`
 --
-ALTER TABLE `role_has_permissions`
+ALTER TABLE `heroku_ca70a97c24f370d`.`role_has_permissions`
   ADD PRIMARY KEY (`permission_id`,`role_id`),
   ADD KEY `role_has_permissions_role_id_foreign` (`role_id`);
 
 --
 -- Indexes for table `sales`
 --
-ALTER TABLE `sales`
+ALTER TABLE `heroku_ca70a97c24f370d`.`sales`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `stock_counts`
 --
-ALTER TABLE `stock_counts`
+ALTER TABLE `heroku_ca70a97c24f370d`.`stock_counts`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `suppliers`
 --
-ALTER TABLE `suppliers`
+ALTER TABLE `heroku_ca70a97c24f370d`.`suppliers`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `taxes`
 --
-ALTER TABLE `taxes`
+ALTER TABLE `heroku_ca70a97c24f370d`.`taxes`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `transfers`
 --
-ALTER TABLE `transfers`
+ALTER TABLE `heroku_ca70a97c24f370d`.`transfers`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `units`
 --
-ALTER TABLE `units`
+ALTER TABLE `heroku_ca70a97c24f370d`.`units`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
 --
-ALTER TABLE `users`
+ALTER TABLE `heroku_ca70a97c24f370d`.`users`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `variants`
 --
-ALTER TABLE `variants`
+ALTER TABLE `heroku_ca70a97c24f370d`.`variants`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `warehouses`
 --
-ALTER TABLE `warehouses`
+ALTER TABLE `heroku_ca70a97c24f370d`.`warehouses`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2901,325 +2901,325 @@ ALTER TABLE `warehouses`
 --
 -- AUTO_INCREMENT for table `accounts`
 --
-ALTER TABLE `accounts`
+ALTER TABLE `heroku_ca70a97c24f370d`.`accounts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `adjustments`
 --
-ALTER TABLE `adjustments`
+ALTER TABLE `heroku_ca70a97c24f370d`.`adjustments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `attendances`
 --
-ALTER TABLE `attendances`
+ALTER TABLE `heroku_ca70a97c24f370d`.`attendances`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `billers`
 --
-ALTER TABLE `billers`
+ALTER TABLE `heroku_ca70a97c24f370d`.`billers`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `brands`
 --
-ALTER TABLE `brands`
+ALTER TABLE `heroku_ca70a97c24f370d`.`brands`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
-ALTER TABLE `categories`
+ALTER TABLE `heroku_ca70a97c24f370d`.`categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `coupons`
 --
-ALTER TABLE `coupons`
+ALTER TABLE `heroku_ca70a97c24f370d`.`coupons`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
-ALTER TABLE `customers`
+ALTER TABLE `heroku_ca70a97c24f370d`.`customers`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `customer_groups`
 --
-ALTER TABLE `customer_groups`
+ALTER TABLE `heroku_ca70a97c24f370d`.`customer_groups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `deliveries`
 --
-ALTER TABLE `deliveries`
+ALTER TABLE `heroku_ca70a97c24f370d`.`deliveries`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `departments`
 --
-ALTER TABLE `departments`
+ALTER TABLE `heroku_ca70a97c24f370d`.`departments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `deposits`
 --
-ALTER TABLE `deposits`
+ALTER TABLE `heroku_ca70a97c24f370d`.`deposits`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `employees`
 --
-ALTER TABLE `employees`
+ALTER TABLE `heroku_ca70a97c24f370d`.`employees`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `expenses`
 --
-ALTER TABLE `expenses`
+ALTER TABLE `heroku_ca70a97c24f370d`.`expenses`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `expense_categories`
 --
-ALTER TABLE `expense_categories`
+ALTER TABLE `heroku_ca70a97c24f370d`.`expense_categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `general_settings`
 --
-ALTER TABLE `general_settings`
+ALTER TABLE `heroku_ca70a97c24f370d`.`general_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `gift_cards`
 --
-ALTER TABLE `gift_cards`
+ALTER TABLE `heroku_ca70a97c24f370d`.`gift_cards`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `gift_card_recharges`
 --
-ALTER TABLE `gift_card_recharges`
+ALTER TABLE `heroku_ca70a97c24f370d`.`gift_card_recharges`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `holidays`
 --
-ALTER TABLE `holidays`
+ALTER TABLE `heroku_ca70a97c24f370d`.`holidays`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `hrm_settings`
 --
-ALTER TABLE `hrm_settings`
+ALTER TABLE `heroku_ca70a97c24f370d`.`hrm_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `languages`
 --
-ALTER TABLE `languages`
+ALTER TABLE `heroku_ca70a97c24f370d`.`languages`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
-ALTER TABLE `migrations`
+ALTER TABLE `heroku_ca70a97c24f370d`.`migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT for table `money_transfers`
 --
-ALTER TABLE `money_transfers`
+ALTER TABLE `heroku_ca70a97c24f370d`.`money_transfers`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `payments`
 --
-ALTER TABLE `payments`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=274;
 
 --
 -- AUTO_INCREMENT for table `payment_with_cheque`
 --
-ALTER TABLE `payment_with_cheque`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payment_with_cheque`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `payment_with_credit_card`
 --
-ALTER TABLE `payment_with_credit_card`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payment_with_credit_card`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `payment_with_gift_card`
 --
-ALTER TABLE `payment_with_gift_card`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payment_with_gift_card`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `payment_with_paypal`
 --
-ALTER TABLE `payment_with_paypal`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payment_with_paypal`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `payrolls`
 --
-ALTER TABLE `payrolls`
+ALTER TABLE `heroku_ca70a97c24f370d`.`payrolls`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `permissions`
 --
-ALTER TABLE `permissions`
+ALTER TABLE `heroku_ca70a97c24f370d`.`permissions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
-ALTER TABLE `products`
+ALTER TABLE `heroku_ca70a97c24f370d`.`products`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `product_adjustments`
 --
-ALTER TABLE `product_adjustments`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_adjustments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `product_purchases`
 --
-ALTER TABLE `product_purchases`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_purchases`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=217;
 
 --
 -- AUTO_INCREMENT for table `product_quotation`
 --
-ALTER TABLE `product_quotation`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_quotation`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `product_returns`
 --
-ALTER TABLE `product_returns`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_returns`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `product_sales`
 --
-ALTER TABLE `product_sales`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_sales`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=343;
 
 --
 -- AUTO_INCREMENT for table `product_transfer`
 --
-ALTER TABLE `product_transfer`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_transfer`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `product_variants`
 --
-ALTER TABLE `product_variants`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_variants`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `product_warehouse`
 --
-ALTER TABLE `product_warehouse`
+ALTER TABLE `heroku_ca70a97c24f370d`.`product_warehouse`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `purchases`
 --
-ALTER TABLE `purchases`
+ALTER TABLE `heroku_ca70a97c24f370d`.`purchases`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `purchase_product_return`
 --
-ALTER TABLE `purchase_product_return`
+ALTER TABLE `heroku_ca70a97c24f370d`.`purchase_product_return`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `quotations`
 --
-ALTER TABLE `quotations`
+ALTER TABLE `heroku_ca70a97c24f370d`.`quotations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `returns`
 --
-ALTER TABLE `returns`
+ALTER TABLE `heroku_ca70a97c24f370d`.`returns`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `return_purchases`
 --
-ALTER TABLE `return_purchases`
+ALTER TABLE `heroku_ca70a97c24f370d`.`return_purchases`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `roles`
 --
-ALTER TABLE `roles`
+ALTER TABLE `heroku_ca70a97c24f370d`.`roles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `sales`
 --
-ALTER TABLE `sales`
+ALTER TABLE `heroku_ca70a97c24f370d`.`sales`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
 
 --
 -- AUTO_INCREMENT for table `stock_counts`
 --
-ALTER TABLE `stock_counts`
+ALTER TABLE `heroku_ca70a97c24f370d`.`stock_counts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `suppliers`
 --
-ALTER TABLE `suppliers`
+ALTER TABLE `heroku_ca70a97c24f370d`.`suppliers`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `taxes`
 --
-ALTER TABLE `taxes`
+ALTER TABLE `heroku_ca70a97c24f370d`.`taxes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `transfers`
 --
-ALTER TABLE `transfers`
+ALTER TABLE `heroku_ca70a97c24f370d`.`transfers`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `units`
 --
-ALTER TABLE `units`
+ALTER TABLE `heroku_ca70a97c24f370d`.`units`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `users`
+ALTER TABLE `heroku_ca70a97c24f370d`.`users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `variants`
 --
-ALTER TABLE `variants`
+ALTER TABLE `heroku_ca70a97c24f370d`.`variants`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `warehouses`
 --
-ALTER TABLE `warehouses`
+ALTER TABLE `heroku_ca70a97c24f370d`.`warehouses`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
@@ -3229,7 +3229,7 @@ ALTER TABLE `warehouses`
 --
 -- Constraints for table `role_has_permissions`
 --
-ALTER TABLE `role_has_permissions`
+ALTER TABLE `heroku_ca70a97c24f370d`.`role_has_permissions`
   ADD CONSTRAINT `role_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `role_has_permissions_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
 COMMIT;
