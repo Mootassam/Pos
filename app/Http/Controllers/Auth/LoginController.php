@@ -30,7 +30,7 @@ class LoginController extends Controller
 
     public function credentials(Request $request)
     {
-        $credentials = $request->only($this->username(), 'password');
+        $credentials = $request->only($this->email(), 'password');
         $credentials = array_add($credentials, 'is_deleted', '0');
         return $credentials;
     }
