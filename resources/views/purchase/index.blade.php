@@ -10,7 +10,7 @@
     <div class="container-fluid">
         @if(in_array("purchases-add", $all_permission))
             <a href="{{route('purchases.create')}}" class="btn btn-info"><i class="dripicons-plus"></i> {{trans('file.Add Purchase')}}</a>&nbsp;
-           {{-- <a href="{{url('purchases/purchase_by_csv')}}" class="btn btn-primary"><i class="dripicons-copy"></i> {{trans('file.Import Purchase')}}</a>--}}
+            <a href="{{url('purchases/purchase_by_csv')}}" class="btn btn-primary"><i class="dripicons-copy"></i> {{trans('file.Import Purchase')}}</a>
         @endif
     </div>
     <div class="table-responsive">
@@ -586,12 +586,11 @@
                         alert('This feature is disable for demo!');
                 }
             },
-            /*
             {
                 extend: 'colvis',
                 text: '{{trans("file.Column visibility")}}',
                 columns: ':gt(0)'
-            },*/
+            },
         ],
         drawCallback: function () {
             var api = this.api();

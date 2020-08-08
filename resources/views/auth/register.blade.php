@@ -84,26 +84,33 @@
               </div>
               <div class="form-group-material">
                 <select name="role_id" required class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" title="Select Role...">
-                  <option value="1">1</option>
-
+                  @foreach($lims_role_list as $role)
+                      <option value="{{$role->id}}">{{$role->name}}</option>
+                  @endforeach
                 </select>
               </div>
               <div class="form-group-material" id="biller-id">
                 <select name="biller_id" required class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" title="Select Biller*...">
-                 <option value="1">1</option>
+                  @foreach($lims_biller_list as $biller)
+                      <option value="{{$biller->id}}">{{$biller->name}} ({{$biller->phone_number}})</option>
+                  @endforeach
                 </select>
               </div>
               <div class="form-group-material" id="warehouse-id">
                 <select name="warehouse_id" required class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" title="Select Warehouse*...">
-                  <option value="1">1</option>
-
+                  @foreach($lims_warehouse_list as $warehouse)
+                      <option value="{{$warehouse->id}}">{{$warehouse->name}}</option>
+                  @endforeach
                 </select>
               </div>
               <div class="form-group-material">
                 <input id="password" type="password" class="input-material" name="password" required>
                 <label for="passowrd" class="label-material">{{trans('file.Password')}} *</label>
-               
-
+                @if ($errors->has('password'))
+                    <p>
+                        <strong>{{ $errors->first('password') }}</strong>
+                    </p>
+                @endif
               </div>
               <div class="form-group-material">
                 <input id="password-confirm" type="password" name="password_confirmation" required class="input-material">

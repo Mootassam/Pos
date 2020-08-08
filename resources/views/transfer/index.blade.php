@@ -10,8 +10,8 @@
     <div class="container-fluid">
         @if(in_array("transfers-add", $all_permission))
             <a href="{{route('transfers.create')}}" class="btn btn-info"><i class="dripicons-plus"></i> {{trans('file.add')}} {{trans('file.Transfer')}}</a>
-{{--            <a href="{{url('transfers/transfer_by_csv')}}" class="btn btn-primary"><i class="dripicons-copy"></i> {{trans('file.import')}} {{trans('file.Transfer')}}</a>
---}}        @endif
+            <a href="{{url('transfers/transfer_by_csv')}}" class="btn btn-primary"><i class="dripicons-copy"></i> {{trans('file.import')}} {{trans('file.Transfer')}}</a>
+        @endif
     </div>
     <div class="table-responsive">
         <table id="transfer-table" class="table transfer-list">
@@ -286,13 +286,12 @@
                     else
                         alert('This feature is disable for demo!');
                 }
-            },/*
+            },
             {
                 extend: 'colvis',
                 text: '{{trans("file.Column visibility")}}',
                 columns: ':gt(0)'
             },
-            */
         ],
         drawCallback: function () {
             var api = this.api();

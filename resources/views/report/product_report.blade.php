@@ -259,7 +259,8 @@
                 'targets': [0]
             }
         ],
-   
+        'select': { style: 'multi',  selector: 'td:first-child'},
+        'lengthMenu': [[10, 25, 50, -1], [10, 25, 50, "All"]],
         dom: '<"row"lfB>rtip',
         buttons: [
             {
@@ -303,12 +304,12 @@
                     datatable_sum(dt, false);
                 },
                 footer:true
-            },/*
+            },
             {
                 extend: 'colvis',
                 text: '{{trans("file.Column visibility")}}',
                 columns: ':gt(0)'
-            }*/
+            }
         ],
         drawCallback: function () {
             var api = this.api();

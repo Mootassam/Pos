@@ -200,12 +200,4 @@ class UserController extends Controller
         else
             return redirect('user')->with('message3', 'Data deleted successfullly');
     }
-
-    public function authenticate(Request $request)
-    {
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password]))
-        {
-            return redirect()->intended('dashboard');
-        }
-    }
 }

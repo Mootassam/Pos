@@ -6,15 +6,23 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Product;
 use DB;
+use Auth;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 use Illuminate\Validation\Rule;
 
 class CategoryController extends Controller
 {
     public function index()
     {
-        $lims_categories = Category::where('is_active', true)->pluck('name', 'id');
-        $lims_category_all = Category::where('is_active', true)->get();
-        return view('category.create',compact('lims_categories', 'lims_category_all'));
+        $role = Role::find(Auth::user()->role_id);
+        if($role->hasPermissionTo('category')) {
+            $lims_categories = Category::where('is_active', true)->pluck('name', 'id');
+            $lims_category_all = Category::where('is_active', true)->get();
+            return view('category.create',compact('lims_categories', 'lims_category_all'));
+        }
+        else
+            return redirect()->back()->with('not_permitted', 'Sorry! You are not allowed to access this module');
     }
 
     public function categoryData(Request $request)
@@ -29,7 +37,10 @@ class CategoryController extends Controller
         $totalData = Category::where('is_active', true)->count();
         $totalFiltered = $totalData; 
 
-        $limit = $request->input('length');
+        if($request->input('length') != -1)
+            $limit = $request->input('length');
+        else
+            $limit = $totalData;
         $start = $request->input('start');
         $order = $columns[$request->input('order.0.column')];
         $dir = $request->input('order.0.dir');

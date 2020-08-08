@@ -229,12 +229,12 @@
                     datatable_sum(dt, false);
                 },
                 footer:true
-            },/*
+            },
             {
                 extend: 'colvis',
                 text: '{{trans("file.Column visibility")}}',
                 columns: ':gt(0)'
-            }*/
+            }
         ],
         drawCallback: function () {
             var api = this.api();

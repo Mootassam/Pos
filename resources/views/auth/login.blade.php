@@ -55,10 +55,10 @@
             @if(session()->has('delete_message'))
             <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>{{ session()->get('delete_message') }}</div> 
             @endif
-            <form method="POST" action="{{ url('authenticate') }}" id="login-form">
+            <form method="POST" action="{{ route('login') }}" id="login-form">
               @csrf
               <div class="form-group-material">
-                <input id="login-username" type="text" name="email" required class="input-material" value="">
+                <input id="login-username" type="text" name="name" required class="input-material" value="">
                 <label for="login-username" class="label-material">{{trans('file.UserName')}}</label>
                 @if ($errors->has('name'))
                     <p>
@@ -93,6 +93,7 @@
     </div>
   </body>
 </html>
+
 <script type="text/javascript">
     $('.admin-btn').on('click', function(){
         $("input[name='name']").focus().val('admin');

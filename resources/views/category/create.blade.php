@@ -17,8 +17,8 @@
     <div class="container-fluid">
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#createModal"><i class="dripicons-plus"></i> {{trans("file.Add Category")}}</button>&nbsp;
-{{--        <button class="btn btn-primary" data-toggle="modal" data-target="#importCategory"><i class="dripicons-copy"></i> {{trans('file.Import Category')}}</button>
---}}    </div>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#importCategory"><i class="dripicons-copy"></i> {{trans('file.Import Category')}}</button>
+    </div>
     <div class="table-responsive">
         <table id="category-table" class="table" style="width: 100%">
             <thead>
@@ -51,7 +51,7 @@
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label>{{trans('file.name')}} *</label>
-                    {{Form::text('name',null,array('required' => 'required', 'class' => 'form-control', 'placeholder' => 'Saisir le nom du categorie...'))}}
+                    {{Form::text('name',null,array('required' => 'required', 'class' => 'form-control', 'placeholder' => 'Type category name...'))}}
                 </div>
                 <div class="col-md-6 form-group">
                     <label>{{trans('file.Image')}}</label>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-md-6 form-group">
                     <label>{{trans('file.Parent Category')}}</label>
-                    {{Form::select('parent_id', $lims_categories, null, ['class' => 'form-control','placeholder' => 'Chosir le parent Categorie'])}}
+                    {{Form::select('parent_id', $lims_categories, null, ['class' => 'form-control','placeholder' => 'No Parent Category'])}}
                 </div> 
             </div>
                            
@@ -291,13 +291,11 @@
                         alert('This feature is disable for demo!');
                 }
             },
-            /*
             {
                 extend: 'colvis',
                 text: '{{trans("file.Column visibility")}}',
                 columns: ':gt(0)'
             },
-            */
         ],
     } );
 

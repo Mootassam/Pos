@@ -125,12 +125,12 @@
                     columns: ':visible:Not(.not-exported)',
                     rows: ':visible'
                 },
-            },/*
+            },
             {
                 extend: 'colvis',
                 text: '{{trans("file.Column visibility")}}',
                 columns: ':gt(0)'
-            }*/
+            }
         ],
     } );
 

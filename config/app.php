@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://posproducts.herokuapp.com'),
+    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -148,7 +148,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Milon\Barcode\BarcodeServiceProvider::class,
-        /*Spatie\Permission\PermissionServiceProvider::class,*/
+        Spatie\Permission\PermissionServiceProvider::class,
         Srmklive\PayPal\Providers\PayPalServiceProvider::class,
         Clickatell\ClickatellServiceProvider::class,
         GeniusTS\LaravelHijri\HijriDatesServiceProvider::class,
