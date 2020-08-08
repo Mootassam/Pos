@@ -183,6 +183,15 @@ class UserController extends Controller
         }
         return 'User deleted successfully!';
     }
+    
+    public function authenticate(Request $request)
+    {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password]))
+        {
+            return redirect()->intended('dashboard');
+        }
+    }
+
 
     public function destroy($id)
     {
