@@ -78,7 +78,7 @@ class RegisterController extends Controller
             'role_id' => $data['role_id'],
             'biller_id' => $data['biller_id'],
             'warehouse_id' => $data['warehouse_id'],
-            'is_active' => false,
+            'is_active' => '1',
             'is_deleted' => false,
             'password' => bcrypt($data['password']),
         ]);

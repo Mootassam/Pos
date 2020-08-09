@@ -184,6 +184,11 @@ class UserController extends Controller
         return 'User deleted successfully!';
     }
 
+    public function authenticate(Request $request)
+    {
+       dd('mootasasm'); 
+    }
+
     public function destroy($id)
     {
         if(!env('USER_VERIFIED'))

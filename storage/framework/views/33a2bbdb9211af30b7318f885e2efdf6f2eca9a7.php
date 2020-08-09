@@ -84,33 +84,26 @@
               </div>
               <div class="form-group-material">
                 <select name="role_id" required class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" title="Select Role...">
-                  <?php $__currentLoopData = $lims_role_list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $role): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                      <option value="<?php echo e($role->id); ?>"><?php echo e($role->name); ?></option>
-                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <option value="1">1</option>
+
                 </select>
               </div>
               <div class="form-group-material" id="biller-id">
                 <select name="biller_id" required class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" title="Select Biller*...">
-                  <?php $__currentLoopData = $lims_biller_list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $biller): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                      <option value="<?php echo e($biller->id); ?>"><?php echo e($biller->name); ?> (<?php echo e($biller->phone_number); ?>)</option>
-                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                 <option value="1">1</option>
                 </select>
               </div>
               <div class="form-group-material" id="warehouse-id">
                 <select name="warehouse_id" required class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" title="Select Warehouse*...">
-                  <?php $__currentLoopData = $lims_warehouse_list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $warehouse): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                      <option value="<?php echo e($warehouse->id); ?>"><?php echo e($warehouse->name); ?></option>
-                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <option value="1">1</option>
+
                 </select>
               </div>
               <div class="form-group-material">
                 <input id="password" type="password" class="input-material" name="password" required>
                 <label for="passowrd" class="label-material"><?php echo e(trans('file.Password')); ?> *</label>
-                <?php if($errors->has('password')): ?>
-                    <p>
-                        <strong><?php echo e($errors->first('password')); ?></strong>
-                    </p>
-                <?php endif; ?>
+               
+
               </div>
               <div class="form-group-material">
                 <input id="password-confirm" type="password" name="password_confirmation" required class="input-material">
