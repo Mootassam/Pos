@@ -3,6 +3,7 @@
 *     GENERAL
 * ==========================================================
 */
+
 .text-bold {
     font-weight: 700;
 }
@@ -169,11 +170,13 @@ section header {
     }
 }
 
+
 /*
 * ==========================================================
 *     Main NAVBAR
 * ==========================================================
 */
+
 nav.navbar {
     background: #393836;
     padding: .8rem 0;
@@ -247,7 +250,7 @@ nav.navbar .nav-menu {
 
 nav.navbar .dropdown-menu {
     border: none;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     width: auto;
     right: auto;
     left: auto;
@@ -339,13 +342,14 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     transform: translateY(4px);
 }
 
+
 /*  NAVBAR MEDIAQUERIES ---------------------------------- */
+
 @media (max-width: 575px) {
     nav.navbar .dropdown-menu {
         width: auto;
         right: -40px;
     }
-
     nav.navbar .notification {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -359,6 +363,7 @@ nav.navbar a.menu-btn i[class*='icon-'] {
         font-weight: 400;
     }
 }
+
 
 /*
 * ==========================================================
@@ -385,7 +390,6 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     padding: 0;
     color: #fff;
 }
-
 
 .side-navbar li {
     position: relative;
@@ -499,27 +503,28 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     opacity: 0
 }
 
+
 /* SIDE NAVBAR MEDIAQUERIES ------------------------------ */
+
 @media (max-width: 1199px) {
     .page {
         margin-left: 0;
         width: 100%;
     }
-
     .page.active {
         width: 100%;
     }
-
     .page.active-sm {
         width: calc(100%);
     }
-
     .side-navbar.show-sm {
         left: 0 !important;
     }
 }
 
+
 /* Malihu Custom Scroll */
+
 .mCSB_scrollTools {
     width: 5px;
 }
@@ -536,11 +541,13 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     background-color: #eee;
 }
 
+
 /*
 * ==========================================================
 *      DASHBOARD COUNTS
 * ==========================================================
 */
+
 .dashboard-counts {
     color: #333;
 }
@@ -567,7 +574,9 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     font-weight: 300;
 }
 
+
 /* DASHBOARD COUNTS MEDIAQUERIES ------------------------- */
+
 @media (max-width: 991px) {
     .dashboard-counts div[class*='col-'] {
         margin-bottom: 20px;
@@ -578,21 +587,21 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     .dashboard-counts strong {
         font-size: 1em;
     }
-
     .dashboard-counts span {
         font-size: 0.9em;
     }
-
     .dashboard-counts .count-number {
         font-size: 3em;
     }
 }
+
 
 /*
 * ==========================================================
 *     DASHBOARD HEADER
 * ==========================================================
 */
+
 .dashboard-header {
     background: #fff;
     border-top: 1px solid #eee;
@@ -625,22 +634,21 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     margin-bottom: 10px;
 }
 
+
 /* DASHBOARD HEADER MEDIAQUERIES ------------------------- */
+
 @media (max-width: 991px) {
     .dashboard-header {
         background: none;
         border: none;
         padding: 0;
     }
-
     .dashboard-header div[class*='col-'] {
         margin-bottom: 30px;
     }
-
     .dashboard-header div[class*='col-']:last-of-type {
         margin-bottom: 0;
     }
-
     .dashboard-header .card {
         background: #fff;
         padding: 30px;
@@ -654,11 +662,9 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     .dashboard-header p {
         font-size: 0.9em;
     }
-
     .dashboard-header h2 {
         font-size: 1.3rem;
     }
-
     .dashboard-header .check-lists label {
         font-size: 0.85em;
     }
@@ -668,7 +674,6 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     .dashboard-header {
         margin-bottom: 30px;
     }
-
     .dashboard-header .card {
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -676,11 +681,13 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     }
 }
 
+
 /*
 * ==========================================================
 *      STATISTICS
 * ==========================================================
 */
+
 .statistics {
     /* User Activity ------------- */
 }
@@ -757,29 +764,26 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     margin-top: 20px;
 }
 
+
 /* STATISTICS  MEDIAQUERIES ------------------------- */
+
 @media (max-width: 991px) {
     .statistics div[class*='col-'] .card {
         height: auto;
         margin-bottom: 30px;
     }
-
     .statistics div[class*='col-']:last-of-type .card {
         margin-bottom: 0;
     }
-
     .statistics .data-usage {
         text-align: center;
     }
-
     .statistics .data-usage div[class*='col-']:first-of-type {
         padding-bottom: 20px;
     }
-
     .statistics .data-usage .gmpc {
         padding-bottom: 20px !important;
     }
-
     p {
         font-size: 0.75em;
     }
@@ -791,11 +795,13 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     }
 }
 
+
 /*
 * ==========================================================
 *      UPDATES WIDGETS
 * ==========================================================
 */
+
 .updates .left-col {
     padding-right: 20px;
 }
@@ -854,32 +860,35 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     margin-bottom: 5px;
 }
 
+
 /* UPDATES MEDIAQUERIES ------------------------- */
+
 @media (max-width: 991px) {
     .updates h2 {
         font-size: 1.05rem;
     }
-
     .updates strong {
         font-size: 1em;
         font-weight: 400;
     }
-
     .updates small {
         font-size: 0.85em;
     }
-
     .updates .full-date {
         font-size: 0.85em;
     }
 }
+
 
 /*
 * ==========================================================
 *      DAILY FEEDS AND ACTIVITES WIDGETS
 * ==========================================================
 */
+
+
 /*  Daily Feeds ------------------- */
+
 .daily-feeds a.feed-profile {
     margin-right: 10px;
     width: 45px;
@@ -937,7 +946,9 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     color: #fff;
 }
 
+
 /* Activities  ------------------- */
+
 .activities li {
     padding: 0;
 }
@@ -981,23 +992,24 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     margin-right: 5px;
 }
 
+
 /* UPDATES WIDGET MEDIAQUERIES ------------------------- */
+
 @media (min-width: 768px) {
     .updates strong {
         font-size: 1em;
     }
-
     .updates small {
         font-size: 0.8em;
     }
 }
+
 
 /*
 * ==========================================================
 *      PROGRESS CIRCLE
 * ==========================================================
 */
-
 
 @media (max-width: 575px) {
     .gmpc {
@@ -1006,11 +1018,13 @@ nav.navbar a.menu-btn i[class*='icon-'] {
     }
 }
 
+
 /*
 * ==========================================================
 *       MAIN FOOTER
 * ==========================================================
 */
+
 footer.main-footer {
     position: absolute;
     width: 100%;
@@ -1025,7 +1039,9 @@ footer.main-footer p {
     margin: 0;
 }
 
+
 /* MAIN FOOTER MEDIAQUERIES ------------------------- */
+
 @media (max-width: 575px) {
     footer.main-footer div[class*="col-"] {
         text-align: center !important;
@@ -1038,45 +1054,54 @@ footer.main-footer p {
     }
 }
 
+
 /*
 * ==========================================================
 *     POLAR CHART
 * ==========================================================
 */
+
 .polar-chart-example .chart-container {
     width: 500px;
     max-width: 100%;
     margin: 20px auto;
 }
 
+
 /*
 * ==========================================================
 *     PIE CHART
 * ==========================================================
 */
+
 .pie-chart-example .chart-container {
     width: 500px;
     max-width: 100%;
     margin: 20px auto;
 }
 
+
 /*
 * ==========================================================
 *     RADAR CHART
 * ==========================================================
 */
+
 .radar-chart-example .chart-container {
     width: 500px;
     max-width: 100%;
     margin: 20px auto;
 }
 
+
 /* CHARTS MEDIAQUERIES -------------------------- */
+
 @media (min-width: 768px) {
     section.charts h2 {
         font-size: 1rem;
     }
 }
+
 
 /*
 * ==========================================================
@@ -1253,11 +1278,13 @@ button {
     cursor: pointer;
 }
 
+
 /*
 * ==========================================================
 *     FORMS GENERAL
 * ==========================================================
 */
+
 .forms .line {
     width: 100%;
     height: 1px;
@@ -1278,38 +1305,37 @@ button {
     font-size: 0.8rem;
 }
 
+
 /* FORMS MEDIAQUERIES -------------------------- */
+
 @media (min-width: 768px) {
     .forms h2 {
         font-size: 1rem;
     }
-
     .forms input.form-control::-moz-placeholder {
         font-size: 0.85em;
     }
-
     .forms input.form-control::-webkit-input-placeholder {
         font-size: 0.85em;
     }
-
     .forms input.form-control:-ms-input-placeholder {
         font-size: 0.85em;
     }
-
     .forms p {
         font-size: 0.9em;
     }
-
     .forms label {
         font-size: 0.9rem;
     }
 }
+
 
 /*
 * ==========================================================
 *     LOGIN PAGE
 * ==========================================================
 */
+
 .login-page,
 .register-page {
     width: 100%;
@@ -1411,47 +1437,43 @@ button {
     line-height: 0.9em;
 }
 
-/* LOGIN MEDIAQUERIES -------------------------- */
-@media (min-width: 768px) {
 
+/* LOGIN MEDIAQUERIES -------------------------- */
+
+@media (min-width: 768px) {
     .login-page p,
     .register-page p {
         font-size: 0.9em;
     }
-
     .login-page form label.label-custom,
     .register-page form label.label-custom {
         font-size: 0.9em;
     }
-
     .login-page form small,
     .register-page form small {
         font-size: 0.8em;
     }
-
     .login-page .terms-conditions label,
     .register-page .terms-conditions label {
         font-size: 0.9em;
     }
-
     .login-page a.forgot-pass,
     .login-page a.signup,
     .register-page a.forgot-pass,
     .register-page a.signup {
         font-size: 0.8em;
     }
-
     .login-page small,
     .register-page small {
         font-size: 0.8em;
     }
-
     .login-page .copyrights p,
     .register-page .copyrights p {
         font-size: 0.85em;
         font-weight: 400;
     }
 }
+
 
 /*
 
@@ -1460,6 +1482,7 @@ STYLE SWITCHER FOR DEMO
 =====================
 
 */
+
 #style-switch-button {
     position: fixed;
     top: 120px;
@@ -1483,12 +1506,16 @@ STYLE SWITCHER FOR DEMO
     color: #495057;
 }
 
+
 /* ========================================= 
    THEMING OF BOOTSTRAP COMPONENTS           
    ========================================= */
+
+
 /*
  * 1. NAVBAR
  */
+
 .navbar {
     padding: 0.5rem 1rem;
 }
@@ -1593,9 +1620,11 @@ STYLE SWITCHER FOR DEMO
     color: rgba(255, 255, 255, 0.5);
 }
 
+
 /*
  * 2. BUTTONS
  */
+
 .btn {
     font-weight: 400;
     border: 1px solid transparent;
@@ -2187,9 +2216,11 @@ STYLE SWITCHER FOR DEMO
     line-height: 1.5;
 }
 
+
 /*
  * 3. TYPE  
  */
+
 body {
     font-family: "Nunito", sans-serif;
     font-size: 1rem;
@@ -2312,6 +2343,7 @@ a.text-primary:hover {
     color: #288b46 !important;
 }
 
+
 /*
  * 4. PAGINATION
  */
@@ -2363,9 +2395,11 @@ a.text-primary:hover {
     border-bottom-right-radius: 0.2rem;
 }
 
+
 /*
 * 5. DROPDOWNS
 */
+
 .dropdown-menu {
     z-index: 1000;
     min-width: 10rem;
@@ -2400,6 +2434,7 @@ a.text-primary:hover {
     font-size: 0.875rem;
     color: #868e96;
 }
+
 
 /*
 * 6. UTILITIES
@@ -2653,9 +2688,11 @@ a.text-dark:hover {
     background-color: #1d2124;
 }
 
+
 /*
 * 7.CODE
 */
+
 code {
     padding: 0.2rem 0.4rem;
     font-size: 90%;
@@ -2670,9 +2707,11 @@ a>code {
     background-color: inherit;
 }
 
+
 /*
 * 8. NAV
 */
+
 .nav-link {
     padding: 0 1.25rem;
 }
@@ -2682,7 +2721,7 @@ a>code {
     border-right: 1px solid #e9e8ef;
 }
 
-@media all and (max-width: 600px){
+@media all and (max-width: 600px) {
     .nav-link span {
         display: none
     }
@@ -2720,14 +2759,16 @@ a>code {
     border-radius: 0;
 }
 
+
 /*
 * 9. CARD
 */
+
 .card {
     border-radius: 5px;
     border: none;
     background-color: #FFFFFF;
-    box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+    box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
 }
 
 .card>.list-group:first-child .list-group-item:first-child {
@@ -2828,30 +2869,31 @@ a>code {
     color: red;
 }
 
+
 /*
  * START Slider
  * *******************************************/
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  height: 40px;
-  width: 40px;
-  background-image: none;
-  background-color: #6449e7;
-  text-align: center;
-  line-height: 40px;
+    height: 40px;
+    width: 40px;
+    background-image: none;
+    background-color: #6449e7;
+    text-align: center;
+    line-height: 40px;
 }
 
-.carousel-control-next-icon:after
-{
-  content: '\f105';
-  font-family: 'FontAwesome';
-  font-size: 20px;
-  color: #fff;
+.carousel-control-next-icon:after {
+    content: '\f105';
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    color: #fff;
 }
 
 .carousel-control-prev-icon:after {
-  content: '\f104';
-  font-family: 'FontAwesome';
-  font-size: 20px;
-  color: #fff;
+    content: '\f104';
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    color: #fff;
 }

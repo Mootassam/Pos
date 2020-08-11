@@ -3,11 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2020 at 04:46 PM
+-- Generation Time: Jul 03, 2020 at 02:40 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";c
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -899,8 +899,7 @@ INSERT INTO `payments` (`id`, `payment_reference`, `user_id`, `purchase_id`, `sa
 (268, 'spr-20200406-074201', 1, NULL, 207, 1, 144, 56, 'Cash', NULL, '2020-04-06 13:42:01', '2020-04-06 13:42:01'),
 (269, 'spr-20200506-105950', 1, NULL, 208, 1, 1540, 460, 'Cash', NULL, '2020-05-06 16:59:50', '2020-05-06 16:59:50'),
 (270, 'spr-20200609-124248', 1, NULL, 209, 1, 1220, 780, 'Cash', NULL, '2020-06-09 06:42:48', '2020-06-09 06:42:48'),
-(273, 'spr-20200703-063914', 1, NULL, 212, 1, 2585, 415, 'Cash', NULL, '2020-07-03 12:39:14', '2020-07-03 12:39:14'),
-(274, 'spr-20200712-095153', 1, NULL, 213, 1, 13, 37, 'Cash', NULL, '2020-07-12 15:51:53', '2020-07-12 15:51:53');
+(273, 'spr-20200703-063914', 1, NULL, 212, 1, 2585, 415, 'Cash', NULL, '2020-07-03 12:39:14', '2020-07-03 12:39:14');
 
 -- --------------------------------------------------------
 
@@ -1128,9 +1127,7 @@ INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at
 (94, 'billers-add', 'web', '2020-02-26 07:11:15', '2020-02-26 07:11:15'),
 (95, 'billers-edit', 'web', '2020-02-26 07:11:15', '2020-02-26 07:11:15'),
 (96, 'billers-delete', 'web', '2020-02-26 07:11:15', '2020-02-26 07:11:15'),
-(97, 'money-transfer', 'web', '2020-03-02 05:41:48', '2020-03-02 05:41:48'),
-(98, 'category', 'web', '2020-07-13 12:13:16', '2020-07-13 12:13:16'),
-(99, 'delivery', 'web', '2020-07-13 12:13:16', '2020-07-13 12:13:16');
+(97, 'money-transfer', 'web', '2020-03-02 05:41:48', '2020-03-02 05:41:48');
 
 -- --------------------------------------------------------
 
@@ -1231,7 +1228,7 @@ INSERT INTO `products` (`id`, `name`, `code`, `type`, `barcode_symbology`, `bran
 (31, 'Shoe', '90471412', 'standard', 'C128', NULL, 12, 1, 1, 1, '250', '300', 29, 10, NULL, NULL, NULL, NULL, NULL, 1, 'Shoe.jpg', NULL, NULL, 1, NULL, NULL, NULL, '', 1, '2018-12-04 23:33:09', '2020-04-06 13:41:11'),
 (32, 'Toothpaste', '859875003032', 'standard', 'C128', NULL, 12, 1, 1, 1, '5', '10', 30, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1572759415477product-page-fresh-breath.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '', 1, '2018-12-18 23:56:08', '2019-11-11 04:28:59'),
 (33, 'tissue', '8941161008066', 'standard', 'C128', NULL, 12, 1, 1, 1, '10', '20', 41, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'zummXD2dvAtI.png', NULL, NULL, NULL, NULL, NULL, NULL, '', 1, '2018-12-23 23:33:58', '2019-11-03 05:39:49'),
-(48, 'T-shirt', '93475396', 'standard', 'C128', NULL, 12, 1, 1, 1, '2', '3', 37, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1577165120189220px-Blue_Tshirt.jpg', NULL, 1, 0, NULL, NULL, NULL, '', 1, '2019-11-21 07:03:04', '2020-07-12 15:51:53'),
+(48, 'T-shirt', '93475396', 'standard', 'C128', NULL, 12, 1, 1, 1, '2', '3', 38, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1577165120189220px-Blue_Tshirt.jpg', NULL, 1, 0, NULL, NULL, NULL, '', 1, '2019-11-21 07:03:04', '2020-03-16 14:08:26'),
 (60, 'testvar', '32081679', 'standard', 'C128', NULL, 12, 1, 1, 1, '1', '2', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'zummXD2dvAtI.png', NULL, 1, 0, NULL, NULL, NULL, '', 1, '2020-05-18 16:44:14', '2020-05-18 16:44:31');
 
 -- --------------------------------------------------------
@@ -1609,8 +1606,7 @@ INSERT INTO `product_sales` (`id`, `sale_id`, `product_id`, `variant_id`, `qty`,
 (337, 209, 25, NULL, 1, 1, 1000, 0, 10, 100, 1100, '2020-06-09 06:42:48', '2020-06-09 06:42:48'),
 (340, 212, 1, NULL, 1, 1, 350, 0, 10, 35, 385, '2020-07-03 12:39:14', '2020-07-03 12:39:14'),
 (341, 212, 25, NULL, 1, 1, 1000, 0, 10, 100, 1100, '2020-07-03 12:39:14', '2020-07-03 12:39:14'),
-(342, 212, 22, NULL, 1, 1, 1000, 0, 10, 100, 1100, '2020-07-03 12:39:14', '2020-07-03 12:39:14'),
-(343, 213, 48, 2, 1, 1, 13, 0, 0, 0, 13, '2020-07-12 15:51:53', '2020-07-12 15:51:53');
+(342, 212, 22, NULL, 1, 1, 1000, 0, 10, 100, 1100, '2020-07-03 12:39:14', '2020-07-03 12:39:14');
 
 -- --------------------------------------------------------
 
@@ -1667,7 +1663,7 @@ CREATE TABLE `product_variants` (
 INSERT INTO `product_variants` (`id`, `product_id`, `variant_id`, `position`, `item_code`, `additional_price`, `qty`, `created_at`, `updated_at`) VALUES
 (3, 48, 3, 1, 'S-93475396', NULL, 13, '2019-11-21 07:03:04', '2020-01-10 11:22:49'),
 (5, 48, 5, 3, 'L-93475396', 50, 11, '2019-11-24 06:07:20', '2020-03-16 14:08:26'),
-(6, 48, 2, 2, 'M-93475396', 10, 13, '2019-11-24 07:17:07', '2020-07-12 15:51:53'),
+(6, 48, 2, 2, 'M-93475396', 10, 14, '2019-11-24 07:17:07', '2020-01-10 11:22:06'),
 (10, 60, 9, 1, 'a-32081679', NULL, 0, '2020-05-18 16:44:14', '2020-05-18 16:44:14'),
 (11, 60, 11, 2, 'b-32081679', NULL, 0, '2020-05-18 16:58:31', '2020-05-18 16:58:31');
 
@@ -1720,7 +1716,7 @@ INSERT INTO `product_warehouse` (`id`, `product_id`, `variant_id`, `warehouse_id
 (35, '48', 3, 1, 2, '2019-11-25 14:23:02', '2020-01-10 11:10:24'),
 (36, '48', 2, 1, 3, '2019-11-26 06:47:42', '2020-01-10 11:10:24'),
 (37, '48', 3, 2, 11, '2019-11-26 08:12:08', '2020-01-10 11:22:49'),
-(38, '48', 2, 2, 10, '2019-11-26 08:12:08', '2020-07-12 15:51:53'),
+(38, '48', 2, 2, 11, '2019-11-26 08:12:08', '2020-01-10 11:22:06'),
 (39, '48', 5, 1, 1, '2019-12-21 10:18:51', '2020-01-10 11:10:24'),
 (40, '48', 5, 2, 10, '2019-12-22 08:36:39', '2020-03-16 14:08:26');
 
@@ -2179,9 +2175,7 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (94, 1),
 (95, 1),
 (96, 1),
-(97, 1),
-(98, 1),
-(99, 1);
+(97, 1);
 
 -- --------------------------------------------------------
 
@@ -2306,8 +2300,7 @@ INSERT INTO `sales` (`id`, `reference_no`, `user_id`, `customer_id`, `warehouse_
 (207, 'posr-20200406-074024', 1, 11, 2, 1, 3, 4, 0, 18.78, 644, 644, 0, 0, 0, NULL, NULL, 0, 1, 4, NULL, 644, NULL, NULL, '2020-04-06 13:40:24', '2020-04-06 13:42:01'),
 (208, 'posr-20200506-105950', 1, 11, 2, 1, 2, 2, 0, 140, 1540, 1540, 0, 0, NULL, NULL, NULL, NULL, 1, 4, NULL, 1540, NULL, NULL, '2020-05-06 16:59:50', '2020-05-06 16:59:50'),
 (209, 'posr-20200609-124248', 1, 11, 2, 1, 2, 2, 0, 100, 1220, 1220, 0, 0, NULL, NULL, NULL, NULL, 1, 4, NULL, 1220, NULL, NULL, '2020-06-09 06:42:48', '2020-06-09 06:42:48'),
-(212, 'posr-20200703-063914', 1, 11, 2, 1, 3, 3, 0, 235, 2585, 2585, 0, 0, NULL, NULL, NULL, NULL, 1, 4, NULL, 2585, NULL, NULL, '2020-07-03 12:39:14', '2020-07-03 12:39:14'),
-(213, 'posr-20200712-095153', 1, 11, 2, 1, 1, 1, 0, 0, 13, 13, 0, 0, NULL, NULL, NULL, NULL, 1, 4, NULL, 13, NULL, NULL, '2020-07-12 15:51:53', '2020-07-12 15:51:53');
+(212, 'posr-20200703-063914', 1, 11, 2, 1, 3, 3, 0, 235, 2585, 2585, 0, 0, NULL, NULL, NULL, NULL, 1, 4, NULL, 2585, NULL, NULL, '2020-07-03 12:39:14', '2020-07-03 12:39:14');
 
 -- --------------------------------------------------------
 
@@ -2471,8 +2464,8 @@ INSERT INTO `units` (`id`, `unit_code`, `unit_name`, `base_unit`, `operator`, `o
 -- Table structure for table `users`
 --
 
-CREATE TABLE `heroku_ca70a97c24f370d`.`users` (
-  `id` int(10) DEFAULT '1',
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -2492,8 +2485,8 @@ CREATE TABLE `heroku_ca70a97c24f370d`.`users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `heroku_ca70a97c24f370d`.`users` (`id`, `name`, `email`, `password`, `remember_token`, `phone`, `company_name`, `role_id`, `biller_id`, `warehouse_id`, `is_active`, `is_deleted`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@gmail.com', '$2y$10$DWAHTfjcvwCpOCXaJg11MOhsqns03uvlwiSUOQwkHL2YYrtrXPcL6', 'Dp1j6i7gaqbVWlIZF1tYqaG3FljwMJtkHOeKvYNopUgcbye2Vja9kMz7Z1DC', '12112', 'lioncoders', 1, NULL, NULL, 1, 0, '2018-06-02 03:24:15', '2018-09-05 00:14:15'),
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `phone`, `company_name`, `role_id`, `biller_id`, `warehouse_id`, `is_active`, `is_deleted`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'admin@gmail.com', '$2y$10$DWAHTfjcvwCpOCXaJg11MOhsqns03uvlwiSUOQwkHL2YYrtrXPcL6', '6EFb2fspgPcCfHqcisgPWKVG2EH6LA5WKVMmIrBXx3WVy2kXkuLkwSd5H9vr', '12112', 'lioncoders', 1, NULL, NULL, 1, 0, '2018-06-02 03:24:15', '2018-09-05 00:14:15'),
 (3, 'dhiman da', 'dhiman@gmail.com', '$2y$10$Fef6vu5E67nm11hX7V5a2u1ThNCQ6n9DRCvRF9TD7stk.Pmt2R6O.', '5ehQM6JIfiQfROgTbB5let0Z93vjLHS7rd9QD5RPNgOxli3xdo7fykU7vtTt', '212', 'lioncoders', 1, NULL, NULL, 1, 0, '2018-06-13 22:00:31', '2018-12-25 03:47:07'),
 (6, 'test', 'test@gmail.com', '$2y$10$TDAeHcVqHyCmurki0wjLZeIl1SngKX3WLOhyTiCoZG3souQfqv.LS', 'KpW1gYYlOFacumklO2IcRfSsbC3KcWUZzOI37gqoqM388Xie6KdhaOHIFEYm', '1234', '212312', 4, NULL, NULL, 0, 1, '2018-06-23 03:05:33', '2018-06-23 03:13:45'),
 (8, 'test', 'test@yahoo.com', '$2y$10$hlMigidZV0j2/IPkgE/xsOSb8WM2IRlsMv.1hg1NM7kfyd6bGX3hC', NULL, '31231', NULL, 4, NULL, NULL, 0, 1, '2018-06-24 22:35:49', '2018-07-02 01:07:39'),
@@ -3047,7 +3040,7 @@ ALTER TABLE `money_transfers`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=275;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=274;
 
 --
 -- AUTO_INCREMENT for table `payment_with_cheque`
@@ -3083,7 +3076,7 @@ ALTER TABLE `payrolls`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -3119,7 +3112,7 @@ ALTER TABLE `product_returns`
 -- AUTO_INCREMENT for table `product_sales`
 --
 ALTER TABLE `product_sales`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=344;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=343;
 
 --
 -- AUTO_INCREMENT for table `product_transfer`
@@ -3179,7 +3172,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
 
 --
 -- AUTO_INCREMENT for table `stock_counts`
@@ -3215,7 +3208,7 @@ ALTER TABLE `units`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `variants`
