@@ -35,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
         if(isset($_COOKIE['language'])) {
             \App::setLocale($_COOKIE['language']);
         } else {
-            \App::setLocale('en');
+            \App::setLocale('fr');
         }
         //get general setting value        
         $general_setting = DB::table('general_settings')->latest()->first();
