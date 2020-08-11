@@ -335,12 +335,12 @@
                     else
                         alert('This feature is disable for demo!');
                 }
-            },
+            },/*
             {
                 extend: 'colvis',
                 text: '{{trans("file.Column visibility")}}',
                 columns: ':gt(0)'
-            },
+            },*/ 
         ],
         drawCallback: function () {
             var api = this.api();

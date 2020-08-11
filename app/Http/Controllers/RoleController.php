@@ -14,12 +14,8 @@ class RoleController extends Controller
 {
     public function index()
     {
-        if(Auth::user()->role_id <= 2) {
-            $lims_role_all = Roles::where('is_active', true)->get();
-            return view('role.create', compact('lims_role_all'));
-        }
-        else
-            return redirect()->back()->with('not_permitted', 'Sorry! You are not allowed to access this module');
+        $lims_role_all = Roles::where('is_active', true)->get();
+        return view('role.create', compact('lims_role_all'));
     }
 
     
@@ -46,12 +42,8 @@ class RoleController extends Controller
 
     public function edit($id)
     {
-        if(Auth::user()->role_id <= 2) {
-            $lims_role_data = Roles::find($id);
-            return $lims_role_data;
-        }
-        else
-            return redirect()->back()->with('not_permitted', 'Sorry! You are not allowed to access this module');
+        $lims_role_data = Roles::find($id);
+        return $lims_role_data;
     }
 
     public function update(Request $request, $id)
@@ -73,17 +65,13 @@ class RoleController extends Controller
 
     public function permission($id)
     {
-        if(Auth::user()->role_id <= 2) {
-            $lims_role_data = Roles::find($id);
-            $permissions = Role::findByName($lims_role_data->name)->permissions;
-            foreach ($permissions as $permission)
-                $all_permission[] = $permission->name;
-            if(empty($all_permission))
-                $all_permission[] = 'dummy text';
-            return view('role.permission', compact('lims_role_data', 'all_permission'));
-        }
-        else
-            return redirect()->back()->with('not_permitted', 'Sorry! You are not allowed to access this module');
+        $lims_role_data = Roles::find($id);
+        $permissions = Role::findByName($lims_role_data->name)->permissions;
+        foreach ($permissions as $permission)
+            $all_permission[] = $permission->name;
+        if(empty($all_permission))
+            $all_permission[] = 'dummy text';
+        return view('role.permission', compact('lims_role_data', 'all_permission'));
     }
 
     public function setPermission(Request $request)
@@ -937,24 +925,6 @@ class RoleController extends Controller
         }
         else
             $role->revokePermissionTo('holiday');
-
-        if($request->has('category')){
-            $permission = Permission::firstOrCreate(['name' => 'category']);
-            if(!$role->hasPermissionTo('category')){
-                $role->givePermissionTo($permission);
-            }
-        }
-        else
-            $role->revokePermissionTo('category');
-
-        if($request->has('delivery')){
-            $permission = Permission::firstOrCreate(['name' => 'delivery']);
-            if(!$role->hasPermissionTo('delivery')){
-                $role->givePermissionTo($permission);
-            }
-        }
-        else
-            $role->revokePermissionTo('delivery');
 
         return redirect('role')->with('message', 'Permission updated successfully');
     }

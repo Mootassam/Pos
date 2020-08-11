@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
-
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -33,10 +30,9 @@ class LoginController extends Controller
 
     public function credentials(Request $request)
     {
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password]))
-        {
-            return redirect()->intended('dashboard');
-        }
+        $credentials = $request->only($this->username(), 'password');
+        $credentials = array_add($credentials, 'is_deleted', '0');
+        return $credentials;
     }
 
     /**

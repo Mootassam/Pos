@@ -10,8 +10,8 @@
     <div class="container-fluid">
         @if(in_array("sales-add", $all_permission))
             <a href="{{route('sales.create')}}" class="btn btn-info"><i class="dripicons-plus"></i> {{trans('file.Add Sale')}}</a>&nbsp;
-            <a href="{{url('sales/sale_by_csv')}}" class="btn btn-primary"><i class="dripicons-copy"></i> {{trans('file.Import Sale')}}</a>
-        @endif
+{{--            <a href="{{url('sales/sale_by_csv')}}" class="btn btn-primary"><i class="dripicons-copy"></i> {{trans('file.Import Sale')}}</a>
+--}}        @endif
     </div>
     <div class="table-responsive">
         <table id="sale-table" class="table sale-list" style="width: 100%">
@@ -792,12 +792,12 @@
                     else
                         alert('This feature is disable for demo!');
                 }
-            },
+            },/*
             {
                 extend: 'colvis',
                 text: '{{trans("file.Column visibility")}}',
                 columns: ':gt(0)'
-            },
+            },*/
         ],
         drawCallback: function () {
             var api = this.api();

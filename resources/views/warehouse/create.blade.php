@@ -309,11 +309,11 @@
                     else
                         alert('This feature is disable for demo!');
                 }
-            },
+            },/*
             {
                 extend: 'colvis',
                 columns: ':gt(0)'
-            },
+            },*/
         ],
     } );
 

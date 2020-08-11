@@ -13,8 +13,8 @@
 <section>
     <div class="container-fluid">
         <button class="btn btn-info" data-toggle="modal" data-target="#createModal"><i class="dripicons-plus"></i> {{trans('file.Add Expense Category')}}</button>&nbsp;
-        <button class="btn btn-primary" data-toggle="modal" data-target="#importExpenseCategory"><i class="dripicons-copy"></i> {{trans('file.Import Expense Category')}}</button>
-    </div>
+{{--       <button class="btn btn-primary" data-toggle="modal" data-target="#importExpenseCategory"><i class="dripicons-copy"></i> {{trans('file.Import Expense Category')}}</button>
+--}}    </div>
     <div class="table-responsive">
         <table id="expense_category-table" class="table">
             <thead>
@@ -310,12 +310,12 @@ function confirmDelete() {
                     else
                         alert('This feature is disable for demo!');
                 }
-            },
+            },/*
             {
                 extend: 'colvis',
                 text: '{{trans("file.Column visibility")}}',
                 columns: ':gt(0)'
-            },
+            },*/ 
         ],
     } );
 

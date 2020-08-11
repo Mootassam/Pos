@@ -1163,30 +1163,6 @@
 						            <td>{{trans('file.Miscellaneous')}}</td>
 						            <td class="report-permissions" colspan="5">
 						            	<span>
-								            <div aria-checked="false" aria-disabled="false">
-								                <div class="checkbox">
-							                    	@if(in_array("category", $all_permission))
-							                    	<input type="checkbox" value="1" id="category" name="category" checked>
-							                    	@else
-							                    	<input type="checkbox" value="1" id="category" name="category">
-							                    	@endif
-								                    <label for="category" class="padding05">{{trans('file.category')}} &nbsp;&nbsp;</label>
-								                </div>
-								            </div>
-						            	</span>
-						            	<span>
-						            		<div aria-checked="false" aria-disabled="false">
-								                <div class="checkbox">
-							                    	@if(in_array("delivery", $all_permission))
-							                    	<input type="checkbox" value="1" id="delivery" name="delivery" checked>
-							                    	@else
-							                    	<input type="checkbox" value="1" id="delivery" name="delivery">
-							                    	@endif
-								                    <label for="delivery" class="padding05">{{trans('file.Delivery')}} &nbsp;&nbsp;</label>
-								                </div>
-								            </div>
-						            	</span>
-						            	<span>
 						                    <div aria-checked="false" aria-disabled="false">
 								                <div class="checkbox">
 							                    	@if(in_array("stock_count", $all_permission))

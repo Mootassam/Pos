@@ -16,8 +16,8 @@
     <div class="container-fluid">
         @if(in_array("customers-add", $all_permission))
             <a href="{{route('customer.create')}}" class="btn btn-info"><i class="dripicons-plus"></i> {{trans('file.Add Customer')}}</a>&nbsp;
-            <a href="#" data-toggle="modal" data-target="#importCustomer" class="btn btn-primary"><i class="dripicons-copy"></i> {{trans('file.Import Customer')}}</a>
-        @endif
+{{--            <a href="#" data-toggle="modal" data-target="#importCustomer" class="btn btn-primary"><i class="dripicons-copy"></i> {{trans('file.Import Customer')}}</a>
+--}}        @endif
     </div>
     <div class="table-responsive">
         <table id="customer-table" class="table">
@@ -350,12 +350,13 @@
                     else
                         alert('This feature is disable for demo!');
                 }
-            },
+            },/*
             {
                 extend: 'colvis',
                 text: '{{trans("file.Column visibility")}}',
                 columns: ':gt(0)'
             },
+            */
         ],
     } );
 

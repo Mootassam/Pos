@@ -36,7 +36,7 @@
           <div class="form-inner">
             <div class="logo text-uppercase"><span>Dash</span><strong class="text-primary">Express</strong></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-            <form id="register-form">
+            <form action="{{url('signup')}}" id="register-form">
               <div class="form-group-material">
                 <input id="register-username" type="text" name="registerUsername" required class="input-material">
                 <label for="register-username" class="label-material">Username</label>

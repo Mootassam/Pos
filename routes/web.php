@@ -17,6 +17,10 @@ Route::group(['middleware' => 'auth'], function() {
 	Route::get('/dashboard', 'HomeController@dashboard');
 });
 
+Route::get('/new', function () {
+	return 'new' ; 
+});
+
 Route::group(['middleware' => ['auth', 'active']], function() {
 
 	Route::get('/', 'HomeController@index');
