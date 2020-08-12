@@ -54,11 +54,11 @@ class SettingController extends Controller
 
         $data = $request->except('site_logo');
         //writting timezone info in .env file
-        $path = '.env.example';
+        /*$path = '.env';
         $searchArray = array('APP_TIMEZONE='.env('APP_TIMEZONE'));
         $replaceArray = array('APP_TIMEZONE='.$data['timezone']);
 
-        file_put_contents($path, str_replace($searchArray, $replaceArray, file_get_contents($path)));
+        file_put_contents($path, str_replace($searchArray, $replaceArray, file_get_contents($path)));*/ 
 
         $general_setting = GeneralSetting::latest()->first();
         $general_setting->id = 1;
