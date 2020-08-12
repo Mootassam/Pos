@@ -282,7 +282,7 @@ return [
 	"Product Quantity Alert" => "Alerte Quantité Produit",
 	"Customer Report" => "Rapport client",
 	"Supplier Report" => "Rapport de fournisseur",
-	"Due Report" => "Rapport dû",
+	"Due Report" => "Rapport Nonpaye",
 	"User Profile" => "Profil de l'utilisateur",
 	"Cash Flow" => "Flux de trésorerie",
 	"Add Category" => "ajouter une catégorie",
