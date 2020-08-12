@@ -350,24 +350,25 @@
 
               ?>
               @if($index_permission_active || $balance_sheet_permission_active || $account_statement_permission_active)
-             <li class=""><a href="#account" aria-expanded="false" data-toggle="collapse"> <i class="dripicons-briefcase"></i><span>{{trans('file.Accounting')}}</span></a>
-               <ul id="account" class="collapse list-unstyled ">
+              {{--       <li class=""><a href="#account" aria-expanded="false" data-toggle="collapse"> <i class="dripicons-briefcase"></i><span>{{trans('file.Accounting')}}</span></a>--}}
+             {{--   <ul id="account" class="collapse list-unstyled ">--}} 
                   @if($index_permission_active)
-                <li id="account-list-menu"><a href="{{route('accounts.index')}}">{{trans('Gestion Acoount')}}</a></li>
-                  <li><a id="add-account" href="">{{trans('file.Add Account')}}</a></li>
+                  {{--    <li id="account-list-menu"><a href="{{route('accounts.index')}}">{{trans('Gestion Acoount')}}</a></li>--}}
+                  {{--      <li><a id="add-account" href="">{{trans('file.Add Account')}}</a></li>--}}
                   @endif
                   @if($money_transfer_permission_active)
-                   <li id="money-transfer-menu"><a href="{{route('money-transfers.index')}}">{{trans('file.Money Transfer')}}</a></li>
+                  {{--       <li id="money-transfer-menu"><a href="{{route('money-transfers.index')}}">{{trans('file.Money Transfer')}}</a></li>--}}
                   @endif
                   @if($balance_sheet_permission_active)
-                  <li id="balance-sheet-menu"><a href="{{route('accounts.balancesheet')}}">{{trans('file.Balance Sheet')}}</a></li>
+                  {{--     <li id="balance-sheet-menu"><a href="{{route('accounts.balancesheet')}}">{{trans('file.Balance Sheet')}}</a></li>--}}
                   @endif
                   @if($account_statement_permission_active)
-                <li id="account-statement-menu"><a id="account-statement" href="">{{trans('file.Account Statement')}}</a></li>
+                  {{--  <li id="account-statement-menu"><a id="account-statement" href="">{{trans('file.Account Statement')}}</a></li>--}} 
                   @endif
-                   </ul> 
-              </li>
+                  {{--      </ul> --}} 
+                  {{--     </li>--}}
               @endif
+              
               <?php 
                 $department = DB::table('permissions')->where('name', 'department')->first();
                 $department_active = DB::table('role_has_permissions')->where([

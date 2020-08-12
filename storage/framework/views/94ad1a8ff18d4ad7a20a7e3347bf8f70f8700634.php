@@ -345,24 +345,25 @@
 
               ?>
               <?php if($index_permission_active || $balance_sheet_permission_active || $account_statement_permission_active): ?>
-             <li class=""><a href="#account" aria-expanded="false" data-toggle="collapse"> <i class="dripicons-briefcase"></i><span><?php echo e(trans('file.Accounting')); ?></span></a>
-               <ul id="account" class="collapse list-unstyled ">
+              
+              
                   <?php if($index_permission_active): ?>
-                <li id="account-list-menu"><a href="<?php echo e(route('accounts.index')); ?>"><?php echo e(trans('Gestion Acoount')); ?></a></li>
-                  <li><a id="add-account" href=""><?php echo e(trans('file.Add Account')); ?></a></li>
+                  
+                  
                   <?php endif; ?>
                   <?php if($money_transfer_permission_active): ?>
-                   <li id="money-transfer-menu"><a href="<?php echo e(route('money-transfers.index')); ?>"><?php echo e(trans('file.Money Transfer')); ?></a></li>
+                  
                   <?php endif; ?>
                   <?php if($balance_sheet_permission_active): ?>
-                  <li id="balance-sheet-menu"><a href="<?php echo e(route('accounts.balancesheet')); ?>"><?php echo e(trans('file.Balance Sheet')); ?></a></li>
+                  
                   <?php endif; ?>
                   <?php if($account_statement_permission_active): ?>
-                <li id="account-statement-menu"><a id="account-statement" href=""><?php echo e(trans('file.Account Statement')); ?></a></li>
+                   
                   <?php endif; ?>
-                   </ul> 
-              </li>
+                   
+                  
               <?php endif; ?>
+              
               <?php 
                 $department = DB::table('permissions')->where('name', 'department')->first();
                 $department_active = DB::table('role_has_permissions')->where([
